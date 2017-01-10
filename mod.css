@@ -1,0 +1,657 @@
+
+/*===================================================*/
+/*===================================================*/
+/* 					 Sem screensize 				 */
+/*===================================================*/
+/*===================================================*/
+
+/*===================================================*/
+/*		 			    Load More					 */
+/*===================================================*/
+
+/*------*/
+.lmp_load_more_button .lmp_button {
+    display: inline-block;
+    padding: 12px 24px !important;
+    font-size: 46px !important;
+    color: #fff !important;
+	background-color: #f2bd00 !important;
+    text-decoration: none !important;
+    border-radius: 80px;
+    line-height: 1em;
+    }
+
+.lmp_load_more_button .lmp_button:hover {
+    background-color: #f0c92c!important;
+    color: #fff;
+}
+p.woocommerce-result-count {
+    display: none;
+}
+/*===================================================*/
+/*===================================================*/
+
+
+/*===================================================*/
+/*		 			    Containers					 */
+/*===================================================*/
+
+div.tg-container {
+    margin: 0 auto;
+    max-width: 1268px;
+    width: inherit;
+}
+.archive-grid div#primary {
+    margin-left: 0;
+    width: 78%;
+}
+aside#secondary {
+    float: right;
+    width: 20%;
+}
+#main .tg-container {
+    padding: 0;
+}
+.woocommerce div .products ul, .woocommerce div ul.products {
+    padding: 15px 0 15px 15px;
+}
+#post-8824 .wp-caption .wp-caption-text {
+    min-height: 56px;
+}
+.no_sidebar_full_width .tg-container div#primary {
+    width: 100%;
+}
+
+/*===================================================*/
+/*                      Widget                       */
+/*===================================================*/
+.slider-caption-wrapper .slider-title {
+    font-size: 32px;
+    line-height: 16px;
+}
+.slider-caption-wrapper .slider-title a {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 0px;
+}
+.widget-area .slider-content {
+  display: none;
+}
+.widget-area .slider-title {
+  font-size: 24px;
+}
+.widget-area .slider-caption-wrapper .slider-title {
+  line-height: 15px;
+  margin: 10px 0 22px;
+}
+.widget-area ul.home-slider {
+    margin-left: 0px;
+}
+.widget .bx-viewport li{
+    background: black;
+}
+.widget .bx-viewport li .wp-post-image{
+    opacity: 0.5;
+}
+#secondary .category-slider .slider-caption-wrapper .slider-btn {
+    padding: 3px 13px;
+}
+@media (max-width: 670px){
+    .widget .slider-caption-wrapper .slider-title {
+        line-height: 20px;
+    }
+    .widget .slider-caption-wrapper .slider-title a {
+        font-size: 20px;
+        line-height: 0px;
+    }
+}
+
+
+/*===================================================*/
+/*                      Header                       */
+/*===================================================*/
+div .bottom-header-wrapper {
+    background: #f2bd00;
+}
+div #site-navigation ul li a {
+    color: black;
+}
+div #site-navigation ul li:hover > a{
+    color: white;
+}
+div #site-navigation ul li:hover > a{
+    color: white;
+}
+div #site-navigation ul.sub-menu li.menu-item:hover > a{
+    color: #f2bd00;
+}
+div .logo-wrapper {
+    margin: 0;
+}
+.site-title-wrapper.with-logo-text {
+    background-image: url(https://elshaddai.com.br/wp-content/themes/El-Shaddai-1-0-0/img/logo-elshaddai.png);
+    height: 88px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#site-title > a {
+    font-size: 0;
+    height: 86px;
+    width: 120px;
+    display: inherit;
+}
+#site-navigation ul li.current-menu-item>a.sf-with-ul{
+    color: white;
+}/*
+#site-navigation ul li.current-menu-item > a {
+    color: white !important;
+}*/
+div.toggle-wrap:hover span.toggle i.fa.fa-reorder {
+    color: white;
+}
+div .wishlist-wrapper .wishlist-value {
+    display: none;
+}
+/*===================================================*/
+/*		 			    footer 						 */
+/*===================================================*/
+.copy-right::after {
+    content: 'Livraria El-Shaddai desde 2003. São Paulo, SP, R. Conde de Sarzedas, Nº 166 loja 18/19 , Bairro Liberdade. CNPJ: 05.750.164/0001-50';
+    font-size: 12px;
+}
+div#bottom-footer .copy-right {
+    font-size: 0;
+    float: none;
+}
+#colophon div#bottom-footer {
+    text-align: center;
+}
+section#woocommerce_recent_reviews-3, #woocommerce_top_rated_products-3 {
+    background: rgba(240, 248, 255, 0);
+}
+/*===================================================*/
+/*===================================================*/
+
+/*===================================================*/
+/*                      carrinho                     */
+/*===================================================*/
+.woocommerce-cart #main  .woocommerce table.shop_table.cart tr.cart_item td.product-thumbnail img{
+        border-radius: 2px;
+}
+.cart-wrapper .woocommerce.widget_shopping_cart .cart_list li img {
+    border-radius: 2px;
+}
+div .woocommerce .woocommerce-error {
+    border-color: red;
+    background-color: #ffebeb;
+}
+.woocommerce ul.woocommerce-error:before {
+    color: red;
+}
+/*===================================================*/
+/*                      Post                         */
+/*===================================================*/
+.single-format-standard .entry-content-text-wrapper .entry-content p {
+    font-size: 18px;
+}
+
+article.hentry h1.entry-title {
+    font-size: 33px;
+}
+/*===================================================*/
+/*                      Produtos                     */
+/*===================================================*/
+figure.products-img a .attachment-shop_catalog.size-shop_catalog.wp-post-image , .woocommerce-page ul.products li.product .products-img img{
+    height: auto;
+    width: auto;
+    max-width: 180px;
+    max-height: 200px;
+    margin: 0 auto;
+}
+figure>a.woocommerce-LoopProduct-link {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.products-hover-block>a.woocommerce-LoopProduct-link {
+    display: none !important;
+}
+.woocommerce-page div ul.products li.product .products-img .products-hover-wrapper {
+    height: 60px;
+    left: inherit;
+    position: relative;
+    margin: -67px auto -4px;
+    bottom: inherit;
+    width: 120px;
+}
+.products-title>a {
+    color: #454545 !important;
+}
+.products-hover-block {
+    visibility: visible!important;
+    opacity: 1 !important;
+}
+.woocommerce-page ul.products li.product figure.products-img{
+    border:none;
+    min-height: 217px;
+}
+div.sales-tag{
+    display: none;
+}
+.woocommerce ul.products li.product a:first-child {
+    min-height: inherit!important;
+}
+.woocommerce-page ul.products li.product .products-img .products-hover-wrapper div.products-hover-block a {
+    vertical-align: middle;
+}
+.WOOF_Widget .chosen-container {
+    width: 100% !important;
+}
+.products-block h3.products-title {
+    min-height: 57px;
+}
+.woocommerce-page ul.products li.product .yith-wcwl-add-to-wishlist .add_to_wishlist.button.alt, .woocommerce-page ul.products li.product .yith-wcwl-add-to-wishlist div.yith-wcwl-wishlistexistsbrowse a, .woocommerce-page ul.products li.product .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistaddedbrowse a {
+    border-radius: 20px;
+    height: auto;
+}
+.woocommerce ul.products li.product span.price {
+    min-height: 25px;
+}
+.yith-wcwl-add-button.show {
+    border: solid #f2bd00 1px;
+    border-radius: 25px;
+}
+div .added_to_cart.wc-forward {
+    bottom: inherit; 
+}
+.woocommerce-page ul.products li.product span.price {
+    font-size: 0;
+}
+.woocommerce-page ul.products li.product .price span.amount {
+    margin-left: 0;
+}
+.woocommerce-page ul.products li.product span.price ins {
+    color: #000000;
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+}
+.woocommerce-page ul.products li.product span.price del {
+    color: #555653;
+    margin-left: 0;
+    display: block;
+    font-size: 14px;
+    line-height: 7px;
+}
+.woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .woocommerce div ul.products li.product, .woocommerce div ul.products li.product, .woocommerce.columns-4 ul.products li.product {
+    float: inherit!important; 
+    margin: 0 0.8%;
+    width: 23%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 40px;
+}
+.products-hover-block a.added_to_cart.wc-forward {
+    display: none !important;
+}
+div blockquote {
+    margin: 0 15px;
+    font-size: 13px;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+.single-product.woocommerce-page .product .product_title {
+    line-height: 30px;
+}
+/*===================================================*/
+/*===================================================*/
+/*		              minha conta	        		 */
+/*===================================================*/
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    float: right!important;
+    width: 30%;
+    border: solid 1px /*#e6e6e6*/;
+    padding: 12px;
+}
+.woocommerce-MyAccount-navigation>ul {
+    list-style: none;
+    margin: 0;
+}
+li.woocommerce-MyAccount-navigation-link {
+    border: solid 1px #e6e6e6;
+    padding: 5px;
+    margin: 0 0 10px;
+    text-align: center;
+    background: whitesmoke;
+    font-weight: 600;
+}
+li.woocommerce-MyAccount-navigation-link>a {
+    color: #7f7d7d;
+    \   width: 100%;
+    height: 100%;
+    display: block;
+}
+li.woocommerce-MyAccount-navigation-link.is-active>a {
+    color: #f2bd00;
+}
+li.woocommerce-MyAccount-navigation-link.is-active {
+    border:solid 1px #f2bd00 !important;
+    background: rgba(242, 189, 0, 0.05);
+}
+/*===================================================*/
+/*===================================================*/
+
+/*===================================================*/
+/*      Produtos por shortcode 4 colunas             */
+/*===================================================*/
+.woocommerce.columns-4 div .products-hover-wrapper{
+    display: none;
+}
+.woocommerce.columns-4 div .products-content-wrapper{
+    text-align: center;
+} 
+.woocommerce.columns-4 div .products-content-wrapper .star-rating{
+    display: none;
+}
+.woocommerce ul.products li.product div.products-content-wrapper span.price{
+    font-size: 0;
+}
+.woocommerce.columns-4 div div.products-content-wrapper span.price del{
+    font-size: 13px;
+    color: black;
+}
+.woocommerce.columns-4 div .products-content-wrapper span.price ins{
+    font-size: 20px;
+    color: black;
+}
+.woocommerce.columns-4 figure.products-img {
+    height: 220px;
+}
+.woocommerce.columns-4 h3.products-title a {
+    font-size: 15px;
+}
+.woocommerce.columns-4 .yith-wcwl-add-to-wishlist .ajax-loading {
+    display: none !important;
+}
+/*===================================================*/
+/*               Menu mobile secundario              */
+/*===================================================*/
+#wprmenu_menu.wprmenu_levels  ul li a, #wprmenu_menu.wprmenu_levels ul li a:hover {
+    padding: 5px 14px;
+}
+#wprmenu_menu.wprmenu_levels span.wprmenu_icon_par {
+    padding: 7px 9px;
+    width: 35px;
+}
+#wprmenu_menu.wprmenu_levels ul li ul.sub-menu li.wprmenu_parent_item_li a.wprmenu_parent_item {
+    margin-left: 30px;
+    border-left: 0;
+}
+#wprmenu_menu.wprmenu_levels ul#wprmenu_menu_ul li.menu-item ul li span.wprmenu_icon_par {
+    margin: 0;
+}
+#wprmenu_menu.wprmenu_levels ul li ul li.menu-item{
+    padding-left: 31px;
+    border: 0;
+}
+#wprmenu_menu_ul ul.sub-menu {
+    margin-left: 8px;
+    border: 0 !important;
+    margin-bottom: 8px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+#wprmenu_menu.wprmenu_levels ul li.menu-item {
+    border-bottom: 0;
+    border-top: 0;
+}
+div#wprmenu_menu.wprmenu_levels ul li ul li {
+    padding-left: 45px;
+    background: rgba(107, 107, 107, 0.29);
+}
+div#wprmenu_menu.wprmenu_levels a.wprmenu_parent_item{
+    margin-left: 30px;
+    border: 0;
+}
+/*===================================================*/
+/*===================================================*/
+
+/*===================================================*/
+/*===================================================*/
+/*              Com screensize MAX 1100px            */
+/*===================================================*/
+/*===================================================*/
+
+@media (max-width: 1100px){
+    .woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .entry-content-wrapper .woocommerce.columns-4 ul.products li.product  {
+        width: 31%;
+    }
+
+}
+/*===================================================*/
+/*===================================================*/
+/*              Com screensize MAX 800px             */
+/*===================================================*/
+/*===================================================*/
+@media (max-width: 800px){
+    .woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .entry-content-wrapper .woocommerce.columns-4 ul.products li.product  {
+        width: 48%;
+    }
+    .tg-container aside#secondary {
+    width: 25%;
+    }
+    .archive-grid div#primary, .tg-container div#primary {
+        width: 74%;
+    }
+    .tg-column-4.footer-block {
+        padding-left: 2%;
+    }
+    /*===================================================*/
+    /*                  filtro mobile                    */
+    /*===================================================*/
+    .woof_container.woof_container_categoriasdeproduto::before{
+        content: 'Categoria de Produto';
+        font-weight: 800;
+    }
+    .woof_container.woof_container_editora::before {
+        content: 'Editora';
+        font-weight: 800;
+    }
+    .woof_container.woof_container_autor::before {
+        content: 'Autor';
+        font-weight: 800;
+    }
+    .woof_container.woof_container_ano::before {
+        content: 'Ano';
+        font-weight: 800;
+    }
+    .woof_container.woof_container_mselect{
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+/*===================================================*/
+/*===================================================*/
+/*              Com screensize MAX 769px             */
+/*===================================================*/
+/*===================================================*/
+@media (min-width: 769px){
+    #site-navigation ul li.current-menu-item > a {
+        color: white !important;
+    }
+    .woocommerce #content div.product div.summary, .woocommerce div div.product div.summary, .woocommerce-page div #content div.product div.summary, .woocommerce-page div.product div.summary {
+        width: 100%;
+    }
+    .woocommerce div #content div.product div.images, .woocommerce div div.product div.images, .woocommerce-page div #content div.product div.images, .woocommerce-page div.product div.images {
+        width: 50%;
+        margin: auto;
+    }
+}
+/*===================================================*/
+/*===================================================*/
+/*              Com screensize MAX 770px             */
+/*===================================================*/
+/*===================================================*/
+@media (max-width:770px){
+    .woocommerce div #content div#primary div.product div.images, .woocommerce div div#primary div.product div.images, .woocommerce-page div #content div#primary div.product div.images, .woocommerce-page div#primary div.product div.images{
+        margin:auto;
+        width:50%;
+    }
+    .woocommerce #content div#primary div.product div.summary, .woocommerce div div#primary div.product div.summary, .woocommerce-page div #content div#primary div.product div.summary, .woocommerce-page div#primary div.product div.summary {
+        width: 100%;
+    }
+   } 
+/*===================================================*/
+/*===================================================*/
+/*              Com screensize MAX 850px             */
+/*===================================================*/
+/*===================================================*/
+@media (min-width:850px){
+
+}
+/*===================================================*/
+/*===================================================*/
+/*              Com screensize MAX 670px             */
+/*===================================================*/
+/*===================================================*/
+@media (max-width: 670px){
+    .tg-container aside#secondary {
+    width: 100%;
+    }
+    .archive-grid div#primary, .tg-container div#primary {
+        width: 100%;
+    }
+    .woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product , .entry-content-wrapper .woocommerce.columns-4 ul.products li.product {
+        width: 31%;
+    }
+	.woocommerce div .products ul, .woocommerce div ul.products , .entry-content-wrapper .woocommerce.columns-4 ul.products li.product {
+	    padding: 15px 0;
+	}
+    .products-block h3.products-title {
+        min-height: 95px;
+    }
+}
+
+/*===================================================*/
+/*===================================================*/
+/*				Com screensize MAX 570px			 */
+/*===================================================*/
+/*===================================================*/
+@media (max-width: 570px){
+		.woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .entry-content-wrapper .woocommerce.columns-4 ul.products li.product  {
+   			width: 47%;
+	}
+}
+/*===================================================*/
+/*===================================================*/
+/*				Com screensize MAX 570px			 */
+/*===================================================*/
+/*===================================================*/
+@media (max-width: 350px){
+		.woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .entry-content-wrapper .woocommerce.columns-4 ul.products li.product  {
+   			width: 100%;
+	}
+}
+/*===================================================*/
+/*===================================================*/
+/* 					sem scrensize 					 */
+/* 					Single product 					 */
+/*===================================================*/
+/*===================================================*/
+.tg-container #primary {
+    width: 77%;
+}
+.woocommerce div #content div.product div.images, .woocommerce div div.product div.images, .woocommerce-page div #content div.product div.images, .woocommerce-page div.product div.images {
+    width: 20%;
+}
+.woocommerce #content div.product div.summary, .woocommerce div div.product div.summary, .woocommerce-page div #content div.product div.summary, .woocommerce-page div.product div.summary {
+    width: 74%;
+}
+.woocommerce div.product p.price ins, .woocommerce div.product span.price ins {
+    color: black;
+    font-size: 30px;
+}
+.summary.entry-summary .clear {
+    /*clear: none;*/
+}
+.woocommerce div div.product p.stock {
+    background: #77a464;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    vertical-align: top;
+}
+.woocommerce div div.product p.stock.out-of-stock{
+    background: #c72727;
+}
+.woocommerce div div.product form.cart div.quantity {
+    margin: 0;
+}
+.single-product.woocommerce-page div.product .cart {
+    vertical-align: bottom;
+    margin: 10px 5px;
+    width: 180px;
+}
+.yith-wcwl-wishlistexistsbrowse span.feedback {
+    display: none;
+}
+.single-product.woocommerce-page div.product .yith-wcwl-add-to-wishlist {
+	    margin-top: 10px;
+}
+.single-product.woocommerce-page div.product .cart .single_add_to_cart_button {
+    padding: 1px 1px 1px 3px;
+    margin: 0 5px 0;
+    font-size: 16px;
+    width: 120px;
+    display: block;
+    background: darkgreen;
+}
+.yith-wcwl-wishlistexistsbrowse.show {
+    margin: 2px 0;
+}
+.woocommerce span.onsale {
+	display: none;
+}
+div#tab-description {
+    display: block !important;
+}
+div#tab-additional_information {
+    display: block !important;
+    padding: 20px 20px 0;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 10px;
+}
+div#tab-additional_information h2{
+	font-size: 18px;
+}
+div#tab-reviews {
+    display: block !important;
+    border-top: 1px solid #e1e1e1;
+}
+ul.tabs.wc-tabs {
+    display: none;
+}
+#commentform > p.comment-form-rating > p > span {
+    font-size: 35px;
+}
+.woocommerce div #review_form #respond p.stars {
+    margin: 0 0 -23px;
+}
+div#review_form_wrapper {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #f2bd00;
+}
+/*===================================================*/
+/*===================================================*/
+/*                  Finalizar compra                 */
+/*===================================================*/
+/*===================================================*/
+@media (max-width: 600px){
+.woocommerce-checkout div.entry-content div.woocommerce {
+    width: inherit;
+}
+}
