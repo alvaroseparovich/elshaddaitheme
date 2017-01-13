@@ -51,7 +51,7 @@ get_header( 'shop' );
 		<div class="tg-container">
 			<div class="cat-description">
 				<?php  if (wc_format_content(term_description())) : ?>
-				<h1 class="nome-cat "><?php woocommerce_page_title(); ?></h1>
+				<h1 class="nome-cat "><?php/* woocommerce_page_title(); */?></h1>
 				<div class="cat-desc-text"><?php echo wc_format_content( term_description());?></div>
 			<?php else : true; endif?>
 			</div>
