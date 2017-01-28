@@ -152,6 +152,9 @@ div.toggle-wrap:hover span.toggle i.fa.fa-reorder {
 div .wishlist-wrapper .wishlist-value {
     display: none;
 }
+body.home .page-header.clearfix {
+    display: none;
+}
 /*===================================================*/
 /*		 			    footer 						 */
 /*===================================================*/
