@@ -196,3 +196,17 @@ if ( is_admin() ) {
 
 //wp_enqueue_style( 'mod.css', get_stylesheet_uri() );
 wp_enqueue_style( 'mod', get_template_directory_uri() . '/mod.css',false,'1.1','all');
+
+//reduz estoque no boleto pagarme
+function compra_com_boleto_reserva_estoque( $order_id ) {
+
+	$order = new WC_Order( $order_id );
+
+	if( get_post_meta( $order->id, '_payment_method', true ) == 'pagarme-banking-ticket'){
+
+		$order->reduce_order_stock(); // reduz o estoque
+		$order->add_order_note( "Livros reservados por comprar com o methodo: pagarme-Boleto"  );
+
+	}
+}
+add_action( 'woocommerce_checkout_order_processed', 'compra_com_boleto_reserva_estoque' );

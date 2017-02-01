@@ -1,12 +1,11 @@
+/*===================================================*/
+/*===================================================*/
+/*                   Sem screensize                  */
+/*===================================================*/
+/*===================================================*/
 
 /*===================================================*/
-/*===================================================*/
-/* 					 Sem screensize 				 */
-/*===================================================*/
-/*===================================================*/
-
-/*===================================================*/
-/*		 			    Load More					 */
+/*                      Load More                    */
 /*===================================================*/
 
 /*------*/
@@ -15,7 +14,7 @@
     padding: 12px 24px !important;
     font-size: 46px !important;
     color: #fff !important;
-	background-color: #f2bd00 !important;
+    background-color: #f2bd00 !important;
     text-decoration: none !important;
     border-radius: 80px;
     line-height: 1em;
@@ -33,7 +32,7 @@ p.woocommerce-result-count {
 
 
 /*===================================================*/
-/*		 			    Containers					 */
+/*                      Containers                   */
 /*===================================================*/
 
 div.tg-container {
@@ -61,7 +60,9 @@ aside#secondary {
 .no_sidebar_full_width .tg-container div#primary {
     width: 100%;
 }
-
+.tg-container .cat-description{
+display:none;
+}
 /*===================================================*/
 /*                      Widget                       */
 /*===================================================*/
@@ -155,8 +156,11 @@ div .wishlist-wrapper .wishlist-value {
 body.home .page-header.clearfix {
     display: none;
 }
+.tg-container .page-description, .tg-container .term-description{
+display:none;
+}
 /*===================================================*/
-/*		 			    footer 						 */
+/*                      footer                       */
 /*===================================================*/
 .copy-right::after {
     content: 'Livraria El-Shaddai desde 2003. São Paulo, SP, R. Conde de Sarzedas, Nº 166 loja 18/19 , Bairro Liberdade. CNPJ: 05.750.164/0001-50';
@@ -309,7 +313,7 @@ div blockquote {
 }
 /*===================================================*/
 /*===================================================*/
-/*		              minha conta	        		 */
+/*                    minha conta                    */
 /*===================================================*/
 .woocommerce-account .woocommerce-MyAccount-navigation {
     float: right!important;
@@ -527,9 +531,9 @@ div#wprmenu_menu.wprmenu_levels a.wprmenu_parent_item{
     .woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product , .entry-content-wrapper .woocommerce.columns-4 ul.products li.product {
         width: 31%;
     }
-	.woocommerce div .products ul, .woocommerce div ul.products , .entry-content-wrapper .woocommerce.columns-4 ul.products li.product {
-	    padding: 15px 0;
-	}
+    .woocommerce div .products ul, .woocommerce div ul.products , .entry-content-wrapper .woocommerce.columns-4 ul.products li.product {
+        padding: 15px 0;
+    }
     .products-block h3.products-title {
         min-height: 95px;
     }
@@ -537,28 +541,28 @@ div#wprmenu_menu.wprmenu_levels a.wprmenu_parent_item{
 
 /*===================================================*/
 /*===================================================*/
-/*				Com screensize MAX 570px			 */
+/*              Com screensize MAX 570px             */
 /*===================================================*/
 /*===================================================*/
 @media (max-width: 570px){
-		.woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .entry-content-wrapper .woocommerce.columns-4 ul.products li.product  {
-   			width: 47%;
-	}
+        .woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .entry-content-wrapper .woocommerce.columns-4 ul.products li.product  {
+            width: 47%;
+    }
 }
 /*===================================================*/
 /*===================================================*/
-/*				Com screensize MAX 570px			 */
+/*              Com screensize MAX 570px             */
 /*===================================================*/
 /*===================================================*/
 @media (max-width: 350px){
-		.woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .entry-content-wrapper .woocommerce.columns-4 ul.products li.product  {
-   			width: 100%;
-	}
+        .woocommerce div ul.products li.product, .woocommerce-page div ul.products li.product, .entry-content-wrapper .woocommerce.columns-4 ul.products li.product  {
+            width: 100%;
+    }
 }
 /*===================================================*/
 /*===================================================*/
-/* 					sem scrensize 					 */
-/* 					Single product 					 */
+/*                  sem scrensize                    */
+/*                  Single product                   */
 /*===================================================*/
 /*===================================================*/
 .tg-container #primary {
@@ -602,7 +606,7 @@ div#wprmenu_menu.wprmenu_levels a.wprmenu_parent_item{
     display: none;
 }
 .single-product.woocommerce-page div.product .yith-wcwl-add-to-wishlist {
-	    margin-top: 10px;
+        margin-top: 10px;
 }
 .single-product.woocommerce-page div.product .cart .single_add_to_cart_button {
     padding: 1px 1px 1px 3px;
@@ -616,7 +620,7 @@ div#wprmenu_menu.wprmenu_levels a.wprmenu_parent_item{
     margin: 2px 0;
 }
 .woocommerce span.onsale {
-	display: none;
+    display: none;
 }
 div#tab-description {
     display: block !important;
@@ -628,7 +632,7 @@ div#tab-additional_information {
     margin-top: 10px;
 }
 div#tab-additional_information h2{
-	font-size: 18px;
+    font-size: 18px;
 }
 div#tab-reviews {
     display: block !important;
