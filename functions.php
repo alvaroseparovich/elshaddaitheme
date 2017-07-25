@@ -194,8 +194,7 @@ if ( is_admin() ) {
 
 /*=========== Aqui começa as minhas func, a parte de cima é tudo do proprio thema ==========*/
 
-//wp_enqueue_style( 'mod.css', get_stylesheet_uri() );
-wp_enqueue_style( 'mod', get_template_directory_uri() . '/mod.css',false,'1.1','all');
+
 
 //reduz estoque no boleto pagarme
 function compra_com_boleto_reserva_estoque( $order_id ) {
@@ -210,3 +209,26 @@ function compra_com_boleto_reserva_estoque( $order_id ) {
 	}
 }
 add_action( 'woocommerce_checkout_order_processed', 'compra_com_boleto_reserva_estoque' );
+
+
+//wp_enqueue_style( 'mod.css', get_stylesheet_uri() );
+//wp_enqueue_style( 'mod', get_template_directory_uri() . '/mod.css',false,'1.1','all');
+function eStore_footer_manual_cache(){
+	return 1;
+}
+
+// $FM adicionando código para verificar o template carregado
+add_filter( 'template_include', 'var_template_include', 1000 );
+function var_template_include( $t ){
+    $GLOBALS['current_theme_template'] = basename($t);
+    return $t;
+}
+
+function get_current_template( $echo = false ) {
+    if( !isset( $GLOBALS['current_theme_template'] ) )
+        return false;
+    if( $echo )
+        echo $GLOBALS['current_theme_template'];
+    else
+        return $GLOBALS['current_theme_template'];
+}

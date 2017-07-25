@@ -1,0 +1,12 @@
+[26-Jun-2017 13:06:50 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/alvaroseparovich/public_html/elshaddai.com.br/wp-content/themes/estore/index.php on line 17
+[26-Jun-2017 13:06:51 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/alvaroseparovich/public_html/elshaddai.com.br/wp-content/themes/estore/index.php on line 17
+[26-Jun-2017 13:07:13 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/alvaroseparovich/public_html/elshaddai.com.br/wp-content/themes/estore/index.php on line 17
+[26-Jun-2017 13:07:13 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/alvaroseparovich/public_html/elshaddai.com.br/wp-content/themes/estore/index.php on line 17
+[26-Jun-2017 13:07:16 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/alvaroseparovich/public_html/elshaddai.com.br/wp-content/themes/estore/index.php on line 17
+[26-Jun-2017 13:07:17 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/alvaroseparovich/public_html/elshaddai.com.br/wp-content/themes/estore/index.php on line 17
+[26-Jun-2017 13:07:21 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/alvaroseparovich/public_html/elshaddai.com.br/wp-content/themes/estore/index.php on line 17
+[26-Jun-2017 13:07:22 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/alvaroseparovich/public_html/elshaddai.com.br/wp-content/themes/estore/index.php on line 17
+[25-Jul-2017 21:58:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/administrarel/public_html/wp-content/themes/estore/index.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/administrarel/public_html/wp-content/themes/estore/index.php on line 17

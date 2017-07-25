@@ -39,7 +39,13 @@ $cat_ID      = $categoryobj->term_id;
 				 */
 				do_action( 'woocommerce_archive_description' );
 			?>
-			<h3 class="entry-sub-title"><?php woocommerce_breadcrumb(); ?></h3>
+            <!-- $FM adicionando submenu de JFA-A, JFA-RA, JFA-RC na categoria pai JFA -->
+			<h3 class="entry-sub-title">
+              <?php woocommerce_breadcrumb(); ?>
+              <?php if ( $cat_ID == 7195 ) : ?>
+                Se preferir, veja: <a href="https://elshaddai.com.br/categoria-produto/biblia/jfa-a/">JFA-A</a> / <a href="https://elshaddai.com.br/categoria-produto/biblia/jfa-ra/">JFA-RA</a> / <a href="https://elshaddai.com.br/categoria-produto/biblia/jfa-rc/">JFA-RC</a>
+              <?php endif; ?>
+            </h3>
 		</div>
 	</div>
 
