@@ -127,24 +127,18 @@ class estore_child_product_slider_ban_widget extends WP_Widget {
 				
 
 				?>
-			<li style="background-image: url(<?php the_post_thumbnail_url() ?>);
-    background-repeat: no-repeat;
-    background-size: 2000px;
-    background-blend-mode: screen;
-    background-position: 10% 10%;
--webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -o-filter: blur(0px);
-  -ms-filter: blur(0px);
-  filter: blur(0px);
-  ">
-			<?php
+			<li>
+				<div class="bg-ban">
+					<?php
+						the_post_thumbnail($post->ID, 'estore-slider') ?> 
+				</div> 
+					<?php
 				the_post_thumbnail( $post->ID, 'estore-slider', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) );
 			?>
 				<div class="slider-caption-wrapper">
 					<h3 class="slider-title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
 					<div class="slider-content"><?php the_excerpt(); ?></div>
-					<a href="<?php the_permalink(); ?>" class="slider-btn"><?php esc_html_e( 'Read More', 'estore' ); ?></a>
+					<a href="<?php the_permalink(); ?>" class="slider-btn"><?php esc_html_e( 'Conferir', 'estore' ); ?></a>
 				</div>
 			</li>
 		<?php
