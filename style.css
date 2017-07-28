@@ -24,6 +24,12 @@
     opacity: 1;
     display: flex!important;
     justify-content: center;
+    flex-direction: column;
+    line-height: 1.3em;
+}
+.woocommerce-page ul.products li.product .price ins .amount {
+    font-size: 1.3em;
+    font-weight: bold;
 }
 .woocommerce ul.products .products-title a {
     text-align: center;
