@@ -73,6 +73,7 @@ div.woocommerce-tabs.wc-tabs-wrapper > ul > div.wc-tab{
     line-height: 1.1em;
     text-shadow: 1px 1px 2px #333;
 }
+
 .product-ban a.slider-btn {
     float: left;
 }
@@ -122,6 +123,28 @@ position: absolute;
     max-width: none;
     height: 15em;
     margin: auto;
+}
+
+
+.featured-slider li .featured-img img {
+    display: block;
+    margin: auto;
+    max-height: 20em;
+    max-width: 18em;
+}
+.featured-slider li .featured-img {
+    border: none;
+        min-height: 21em;
+}
+
+.woocommerce-variation-price span.woocommerce-Price-amount.amount {
+    font-size: 1.7em;
+}
+.slider-content.price{ font-size: 3em; }
+@media (max-width: 768px){   
+.product-ban .slider-caption-wrapper .slider-content {
+    display: block;
+}
 }
 /*========================*/
 

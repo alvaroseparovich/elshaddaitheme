@@ -137,7 +137,7 @@ class estore_child_product_slider_ban_widget extends WP_Widget {
 			?>
 				<div class="slider-caption-wrapper">
 					<h3 class="slider-title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
-					<div class="slider-content"><?php the_excerpt(); ?></div>
+					<div class="slider-content price"><?php echo 'R$ ' . wc_get_product($post->ID)->get_price(); ?></div>
 					<a href="<?php the_permalink(); ?>" class="slider-btn"><?php esc_html_e( 'Conferir', 'estore' ); ?></a>
 				</div>
 			</li>
