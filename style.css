@@ -13,6 +13,7 @@
 */
 /*=======================*/
 
+
 .woocommerce ul.products li.product figure.products-img img {
     width: auto;
     height: auto;
@@ -26,6 +27,9 @@
     justify-content: center;
     flex-direction: column;
     line-height: 1.3em;
+}
+.woocommerce-page ul.products li.product .products-img .products-hover-wrapper .products-hover-block{
+        flex-direction: inherit;
 }
 .woocommerce-page ul.products li.product .price ins .amount {
     font-size: 1.3em;
@@ -95,8 +99,16 @@ div.woocommerce-tabs.wc-tabs-wrapper > ul > div.wc-tab{
 position: absolute;
     width: 100%;
     height: 150%;
-    margin: -20% 0%;
+    margin: -5% 0%;
     filter: blur(30px);
+    z-index: -2;
+}
+.bg-ban .mask {
+    background: rgba(0, 0, 0, 0.30);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     z-index: -1;
 }
 @media (min-width: 769px) {
@@ -213,7 +225,7 @@ aside#secondary {
 }
 
 .widget-area .slider-caption-wrapper .slider-title {
-    line-height: 15px;
+    line-height: 20px;
     margin: 10px 0 22px
 }
 
@@ -222,7 +234,8 @@ aside#secondary {
 }
 
 .widget .bx-viewport li .wp-post-image {
-    opacity: 1
+    opacity: 1;
+    box-shadow: 5px 5px 47px black;
 }
 
 #secondary .category-slider .slider-caption-wrapper .slider-btn {
@@ -369,8 +382,8 @@ figure>a.woocommerce-LoopProduct-link {
     margin: -67px auto -4px;
     bottom: 0;
     vertical-align: bottom;
-    /* width: 60px; */
-    background: #f2bd00;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.55);
 }
 
 .products-title>a {
@@ -797,19 +810,19 @@ div#tab-additional_information {
 }
 
 div#tab-additional_information h2 {
-    font-size: 18px
+    font-size: 18px;
 }
 
 div#tab-reviews {
-    border-top: 1px solid #e1e1e1
+    border-top: 1px solid #e1e1e1;
 }
 
 ul.tabs.wc-tabs {
-    display: none
+    display: none;
 }
 
 #commentform>p.comment-form-rating>p>span {
-    font-size: 35px
+    font-size: 35px;
 }
 
 .woocommerce div #review_form #respond p.stars {
@@ -818,26 +831,26 @@ ul.tabs.wc-tabs {
 div#review_form_wrapper {
     padding: 20px;
     margin-top: 20px;
-    border: 1px solid #f2bd00
+    border: 1px solid #f2bd00;
 }
 
 @media (max-width:600px) {
     .woocommerce-checkout div.entry-content div.woocommerce {
-        width: inherit
+        width: inherit;
     }
 }
 
 .woocommerce-checkout #payment:before {
     content: "*Pagamento em Boleto Bancário Disponíveis em compras de no mínimo R$ 99,9.";
     color: coral;
-    padding: 10px
+    padding: 10px;
 }
 
 @media screen and (max-width:1090px) {
     .banner_wrapper .banner>img {
         margin-left: -14vw;
         width: 130%;
-        max-width: 200%
+        max-width: 200%;
     }
 }
 
@@ -845,7 +858,7 @@ div#review_form_wrapper {
     .banner_wrapper .banner>img {
         margin-left: -24vw;
         width: 150%;
-        max-width: 200%
+        max-width: 200%;
     }
 }
 
@@ -853,19 +866,19 @@ div#review_form_wrapper {
     .banner_wrapper .banner>img {
         margin-left: -40vw;
         width: 182%;
-        max-width: 200%
+        max-width: 200%;
     }
 }
 
 .custom-banners-cycle-slideshow {
-    z-index: 0
+    z-index: 0;
 }
 
 .woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-enabled {
     display: inline-block;
     vertical-align: bottom;
     width: 180px;
-    margin-left: 0
+    margin-left: 0;
 }
 
 .woocommerce-variation-availability {
@@ -874,11 +887,11 @@ div#review_form_wrapper {
 
 .woocommerce-variation.single_variation {
     display: inline-block;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 .product-type-variable div[itemprop=offers] p.price ins {
-    font-size: 16px
+    font-size: 16px;
 }
 
 form.variations_form.cart .woocommerce-variation-price .price:before {
@@ -892,10 +905,13 @@ form.variations_form.cart .woocommerce-variation-price .price:before {
     max-width: 61%;
     min-width: 64%;
     display: inline-block;
-    margin-right: 1em
+    margin-right: 1em;
 }
 
 .simple-theme.woocommerce-products-carousel-all-in-one .woocommerce-products-carousel-all-in-one-title {
     text-align: center;
-    font-size: 11px
+    font-size: 11px;
+}
+.featured-slider li .featured-title{
+    min-height: 40px;
 }
