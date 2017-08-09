@@ -39,7 +39,7 @@ $post_id = get_post()->ID;
 
 	if(wp_get_post_terms( $post_id , 'pa_editora')){
 		
-		echo '<div class="editora line">Editora: <h2><a href="'. esc_url( get_term_link( wp_get_post_terms( $post_id , 'pa_editora')[0]->term_id , 'pa_editora' ) ) . '">';
+		echo '<div class="editora line"><h2>Editora: <a href="'. esc_url( get_term_link( wp_get_post_terms( $post_id , 'pa_editora')[0]->term_id , 'pa_editora' ) ) . '">';
 
 		echo wp_get_post_terms( $post_id , 'pa_editora')[0]->name . '</a></h2></div>';}
 

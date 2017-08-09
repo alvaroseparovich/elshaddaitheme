@@ -950,3 +950,7 @@ ul.products li.product.type-product.outofstock{
 }
 .woocommerce div.product div.images .flex-control-thumbs li {
     width: 15%;}
+.tg-column-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
