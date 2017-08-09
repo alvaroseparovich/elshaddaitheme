@@ -430,7 +430,7 @@ div blockquote {
 }
 
 .single-product.woocommerce-page .product .product_title {
-    line-height: 30px
+    line-height: 1em
 }
 
 .woocommerce div.product div.images div.thumbnails a.zoom {
@@ -915,3 +915,38 @@ form.variations_form.cart .woocommerce-variation-price .price:before {
 .featured-slider li .featured-title{
     min-height: 40px;
 }
+ul.products li.product.type-product.outofstock{
+    opacity: 0.7;
+}
+.woocommerce-page ul.products li.product.outofstock .products-img .products-hover-wrapper .products-hover-block a i.fa-shopping-cart {
+    opacity: 0.4;
+}
+.short-detail .line{
+    display: flex;
+}
+.short-detail h1, .short-detail h2, .short-detail p{
+    font-size: 1.1em;
+    margin:0;
+    font-weight: 300;
+}
+.posted_in h2 , .woocommerce .product .shop_attributes h2, .woocommerce .product .shop_attributes p, .woocommerce .product .shop_attributes h3 {
+    font-size: 1em!important;
+    margin: 0;
+    display: inline;
+}
+.single-product.woocommerce-page .product .summary .price{
+    margin-bottom: 0;
+}
+.woocommerce p.stars a{
+    z-index: 1000;
+}
+.product_title.entry-title i {
+    font-size: 0.5em;
+    opacity: 0.5;
+}
+.woocommerce div.product div.images .flex-control-thumbs {
+    display: flex;
+    flex-wrap: wrap;
+}
+.woocommerce div.product div.images .flex-control-thumbs li {
+    width: 15%;}
