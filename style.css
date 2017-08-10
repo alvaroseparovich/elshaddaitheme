@@ -35,6 +35,7 @@
     font-size: 1.3em;
     font-weight: bold;
 }
+
 .woocommerce ul.products .products-title a {
     text-align: center;
 }
@@ -376,12 +377,14 @@ figure>a.woocommerce-LoopProduct-link {
 }
 
 .woocommerce-page div ul.products li.product .products-img .products-hover-wrapper {
-    height: 60px;
+    height: 55px;
+
     left: inherit;
     position: relative;
     margin: -67px auto -4px;
     bottom: 0;
     vertical-align: bottom;
+
     width: 60%;
     background: rgba(0, 0, 0, 0.55);
 }

@@ -20,7 +20,6 @@ function compra_com_boleto_reserva_estoque( $order_id ) {
 }
 add_action( 'woocommerce_checkout_order_processed', 'compra_com_boleto_reserva_estoque' );
 
-
 //checkout com os campos bairro obrigatorio, 5 numeros no numero, e 30 no complemento
 
 function wc_elshaddai_bfield( $fields ) {
