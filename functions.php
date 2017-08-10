@@ -20,4 +20,9 @@ function compra_com_boleto_reserva_estoque( $order_id ) {
 }
 add_action( 'woocommerce_checkout_order_processed', 'compra_com_boleto_reserva_estoque' );
 
+function AS_title($title){
 
+	$title['title'] = 'piróca';
+	return $title;
+}
+add_filter('wp_title', 'AS_title');
