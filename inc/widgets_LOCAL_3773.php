@@ -129,12 +129,11 @@ class estore_child_product_slider_ban_widget extends WP_Widget {
 				?>
 			<li>
 				<div class="bg-ban">
-				<div class="mask"></div>
 					<?php
-						the_post_thumbnail($post->ID, 'shop_catalog') ?> 
+						the_post_thumbnail($post->ID, 'estore-slider') ?> 
 				</div> 
 					<?php
-				the_post_thumbnail( $post->ID, 'shop_catalog', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) );
+				the_post_thumbnail( $post->ID, 'estore-slider', array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) );
 			?>
 				<div class="slider-caption-wrapper">
 					<h3 class="slider-title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h3>
@@ -155,7 +154,6 @@ class estore_child_product_slider_ban_widget extends WP_Widget {
 
 
 
-<<<<<<< HEAD
 
 /**
  * Contains all the functions related to sidebar and widget.
@@ -178,8 +176,6 @@ function estore_child_widgets_attr_init() {
 	register_widget( "estore_child_product_slider_ban_attr_widget" );
 }
 
-=======
->>>>>>> 58c8d611e588c167f1eb7882fba09ac939bd1682
 // Featured Category Product Slider Widget
 class estore_child_product_slider_ban_attr_widget extends WP_Widget {
 
