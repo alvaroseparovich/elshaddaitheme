@@ -5,7 +5,7 @@
  Author:       Alvaro Sep
  Author URI:   http://alvaroseparovich..esy.es
  Template:     estore
- Version:      0.1.0
+ Version:      0.1.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, clean, responsive-layout, woocommerce
@@ -957,3 +957,6 @@ ul.products li.product.type-product.outofstock{
     display: flex;
     flex-wrap: wrap;
 }
+.child-product figure, .child-product .product-list-content {
+    max-width: 47%;
+} 
