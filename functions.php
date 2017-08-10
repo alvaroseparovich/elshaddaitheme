@@ -21,3 +21,20 @@ function compra_com_boleto_reserva_estoque( $order_id ) {
 add_action( 'woocommerce_checkout_order_processed', 'compra_com_boleto_reserva_estoque' );
 
 
+//checkout com os campos bairro obrigatorio, 5 numeros no numero, e 30 no complemento
+
+function wc_elshaddai_bfield( $fields ) {
+    $fields['billing_number']['maxlength'] = 5;
+    $fields['billing_address_2']['maxlength'] = 30;
+    $fields['billing_neighborhood']['required'] = true;
+    return $fields;
+}
+add_filter( 'woocommerce_billing_fields', 'wc_elshaddai_bfield' );
+
+function wc_elshaddai_sfield( $fields ) {
+    $fields['shipping_number']['maxlength'] = 5;
+    $fields['shipping_address_2']['maxlength'] = 30;
+    $fields['shipping_neighborhood']['required'] = true;
+    return $fields;
+}
+add_filter( 'woocommerce_shipping_fields', 'wc_elshaddai_sfield' );
