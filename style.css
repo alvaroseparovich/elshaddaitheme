@@ -995,3 +995,11 @@ ul.product-ban .bg-ban{
 @media (max-width: 370px){.product-list-block.child-product .product-list-content h3.product-list-title , .product-list-block.child-product .product-list-content span.price {font-size: 1.1em;}}
 .child-product{display: flex;}
 .child-product .product-list-content{margin-left: 8px;}
+.tg-column-wrapper .collection-block img {
+    width: 100%;
+}
+.page-template .widget.widget_text {
+    max-width: 1275px;
+    margin-left: auto;
+    margin-right: auto;
+}
