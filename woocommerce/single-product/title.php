@@ -23,8 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 the_title( '<h1 class="product_title entry-title">', '' );
 
 $post_id = get_post()->ID;
-
-if(wp_get_post_terms( $post_id , 'pa_autor')){
+if(wp_get_post_terms( $post_id , 'pa_extencao')){
+	echo '<i> | '.wp_get_post_terms( $post_id , 'pa_extencao')[0]->name . '</i>';
+}elseif(wp_get_post_terms( $post_id , 'pa_autor')){
 	echo '<i> | '.wp_get_post_terms( $post_id , 'pa_autor')[0]->name . '</i>';
 }elseif(wp_get_post_terms( $post_id , 'pa_editora')){
 	echo '<i> | '.wp_get_post_terms( $post_id , 'pa_editora')[0]->name . '</i>';

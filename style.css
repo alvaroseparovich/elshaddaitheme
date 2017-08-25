@@ -5,7 +5,7 @@
  Author:       Alvaro Sep
  Author URI:   http://alvaroseparovich..esy.es
  Template:     estore
- Version:      0.1.1
+ Version:      0.1.2
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, clean, responsive-layout, woocommerce
@@ -58,7 +58,7 @@ div.woocommerce-tabs.wc-tabs-wrapper > ul > div.wc-tab{
 }
 .woocommerce div.product p.price ins{
     font-size: 2em;}
-    
+
 .woocommerce ul.products li.product figure.products-img > a:nth-child(2) {
     height: 215px;
 }
@@ -77,7 +77,7 @@ div.woocommerce-tabs.wc-tabs-wrapper > ul > div.wc-tab{
     padding: 0.4em 0 2.2em;
 }
 
-.product-ban h3.slider-title , 
+.product-ban h3.slider-title ,
 .product-ban div.slider-content {
     text-align: left;
     width: 50%;
@@ -129,18 +129,21 @@ position: absolute;
 .widget_vertical_promo .collection-block {
     position: relative;
     height: 15em;
+    overflow: hidden;
 }
 .widget_vertical_promo .collection-block .slider-collection-img {
     margin: 0;
     background: #888;
     text-align: center;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 .widget_vertical_promo .collection-block .slider-collection-img img {
     display: block;
-    width: auto;
+    min-width: 100%;
     max-width: none;
-    height: 15em;
+    min-height: 100%;
     margin: auto;
 }
 
@@ -160,7 +163,7 @@ position: absolute;
     font-size: 1.7em;
 }
 .slider-content.price{ font-size: 3em; }
-@media (max-width: 768px){   
+@media (max-width: 768px){
 .product-ban .slider-caption-wrapper .slider-content {
     display: block;
 }
@@ -1003,3 +1006,11 @@ ul.product-ban .bg-ban{
     margin-left: auto;
     margin-right: auto;
 }
+/*
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper .zoomImg {
+    top: 0!important;
+    left: 0!important;
+}
+.product .flex-viewport, .product .flex-active-slide {
+    overflow: visible!important;
+}*/
