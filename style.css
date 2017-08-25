@@ -35,7 +35,11 @@
     font-size: 1.3em;
     font-weight: bold;
 }
-
+.woocommerce-page.woocommerce ul.products li.product .price {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+}
 .woocommerce ul.products .products-title a {
     text-align: center;
 }
@@ -105,7 +109,7 @@ position: absolute;
     z-index: -2;
 }
 .bg-ban .mask {
-    background: rgba(0, 0, 0, 0.30);
+    background: rgba(0, 0, 0, 0.50);
     display: block;
     width: 100%;
     height: 100%;
@@ -145,6 +149,7 @@ position: absolute;
     max-width: none;
     min-height: 100%;
     margin: auto;
+    width: 100%;
 }
 
 
