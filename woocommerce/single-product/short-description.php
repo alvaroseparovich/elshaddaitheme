@@ -29,24 +29,26 @@ echo '<div  class="short-detail">';
 
 $post_id = get_post()->ID;
 	echo '<div class="title line"> Nome: ';
-	the_title( '<p><i>', '</i></p>' );
+	the_title( '<h2><i>', '</i></h2>' );
 	echo '</div>';
 	if(wp_get_post_terms( $post_id , 'pa_autor')){
-		echo '<div class="autor line"> Autor: <h2><a href="'. esc_url( get_term_link( wp_get_post_terms( $post_id , 'pa_autor')[0]->term_id , 'pa_autor' ) ) . '">';  
+		echo '<div class="autor line"> Autor: <h2><a href="'. esc_url( get_term_link( wp_get_post_terms( $post_id , 'pa_autor')[0]->term_id , 'pa_autor' ) ) . '">';
 		echo wp_get_post_terms( $post_id , 'pa_autor')[0]->name . '</a></h2></div>';
 
 	}
 
 	if(wp_get_post_terms( $post_id , 'pa_editora')){
-		
+
 		echo '<div class="editora line"><h2>Editora: <a href="'. esc_url( get_term_link( wp_get_post_terms( $post_id , 'pa_editora')[0]->term_id , 'pa_editora' ) ) . '">';
 
 		echo wp_get_post_terms( $post_id , 'pa_editora')[0]->name . '</a></h2></div>';}
 
+		if ( $post->post_excerpt ) {
+			echo '<h2><i>';
+			echo apply_filters( 'woocommerce_short_description', $post->post_excerpt );
+			echo '</i></h2>';
+		}
 echo '</div>';
+	?>
 
-if ( $post->post_excerpt ) {
-     echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); 
-}
-?>
 </div>

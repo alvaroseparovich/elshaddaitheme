@@ -935,7 +935,7 @@ ul.products li.product.type-product.outofstock{
 .short-detail .line{
     display: flex;
 }
-.short-detail h1, .short-detail h2, .short-detail p{
+.short-detail h1, .short-detail h2, .short-detail h3, .short-detail p{
     font-size: 1.1em;
     margin:0;
     font-weight: 300;
@@ -1010,6 +1010,9 @@ ul.product-ban .bg-ban{
     max-width: 1275px;
     margin-left: auto;
     margin-right: auto;
+}
+#primary .woocommerce a.button {
+    color: white;
 }
 /*
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper .zoomImg {

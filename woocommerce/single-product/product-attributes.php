@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						$value_name = esc_html( $attribute_value->name );
 
 						if ( $attribute_taxonomy->attribute_public ) {
-							$values[] = '<h3><a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a></h3>';
+							$values[] = '<h3><b><a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a></b></h3>';
 						} else {
 							$values[] = $value_name;
 						}
