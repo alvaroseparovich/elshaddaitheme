@@ -33,7 +33,7 @@ $estore_layout = estore_woocommerce_layout_class();
 				<h3 class="entry-title"><?php woocommerce_page_title(); ?></h3>
 
 			<?php endif; ?>
-			<h2 class="entry-sub-title"><?php woocommerce_breadcrumb(); ?></h2>
+			<h3 class="entry-sub-title"><?php woocommerce_breadcrumb(); ?></h3>
 		</div>
 	</div>
 

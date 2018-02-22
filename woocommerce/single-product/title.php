@@ -15,18 +15,15 @@
  * @package    WooCommerce/Templates
  * @version    1.6.4
  */
+global $post;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
+}$complement_name_product = retrieve_var1_replacement();
+the_title( '<div class="title-entry-p"><h1 class="product_title entry-title"><span>', "</span><i>".retrieve_var1_replacement()."</i></h1>" );
+if ( $post->post_excerpt ) {
+	echo '<h2 class="subtitle"><i>';
+	echo apply_filters( 'woocommerce_short_description', $post->post_excerpt );
+	echo '</i></h2>';
 }
-
-the_title( '<h1 class="product_title entry-title">', '' );
-
-$post_id = get_post()->ID;
-
-if(wp_get_post_terms( $post_id , 'pa_autor')){
-	echo '<i> | '.wp_get_post_terms( $post_id , 'pa_autor')[0]->name . '</i>';
-}elseif(wp_get_post_terms( $post_id , 'pa_editora')){
-	echo '<i> | '.wp_get_post_terms( $post_id , 'pa_editora')[0]->name . '</i>';
-}
-echo '</h1>';
+echo "</div>";

@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     1.6.4
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -28,25 +28,32 @@ echo '<div class="woocommerce-product-details__short-description">';
 echo '<div  class="short-detail">';
 
 $post_id = get_post()->ID;
-	echo '<div class="title line"> Nome: ';
-	the_title( '<p><i>', '</i></p>' );
-	echo '</div>';
-	if(wp_get_post_terms( $post_id , 'pa_autor')){
-		echo '<div class="autor line"> Autor: <h2><a href="'. esc_url( get_term_link( wp_get_post_terms( $post_id , 'pa_autor')[0]->term_id , 'pa_autor' ) ) . '">';  
-		echo wp_get_post_terms( $post_id , 'pa_autor')[0]->name . '</a></h2></div>';
 
-	}
-
-	if(wp_get_post_terms( $post_id , 'pa_editora')){
-		
-		echo '<div class="editora line"><h2>Editora: <a href="'. esc_url( get_term_link( wp_get_post_terms( $post_id , 'pa_editora')[0]->term_id , 'pa_editora' ) ) . '">';
-
-		echo wp_get_post_terms( $post_id , 'pa_editora')[0]->name . '</a></h2></div>';}
-
+echo '<div class="title line"> Nome: ';
+the_title( '<h2><i>', retrieve_var1_replacement().'</i></h2>' );
 echo '</div>';
 
-if ( $post->post_excerpt ) {
-     echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); 
+$retrieve = retrieve_var1_replacement('pa_autor',1);
+if($retrieve){
+	echo '<div class="autor line"> Autor:';
+	foreach ($retrieve as $key => $value) {
+		echo ' <buttom><h2><a href="'. esc_url( get_term_link( $value, 'pa_autor' ) ) . '">';
+		echo $value . '</a></h2></buttom> ';
+	}
+	echo'</h2></div>';
 }
-?>
+
+$retrieve = retrieve_var1_replacement('pa_editora',1);
+if($retrieve){
+	echo '<div class="editora line"> Editora:';
+	foreach ($retrieve as $key => $value) {
+		echo ' <buttom><h2><a href="'. esc_url( get_term_link( $value , 'pa_editora' ) ) . '">';
+		echo $value . '</a></h2></buttom> ';
+	}
+	echo'</h2></div>';
+	}
+
+echo '</div>';
+	?>
+
 </div>

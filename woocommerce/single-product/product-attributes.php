@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <table class="shop_attributes">
 		<tr>
 			<th>Título</th>
-			<td class="product_name"><?php the_title( '<h3>', '</h3>' ); ?></td>
+			<td class="product_name"><?php the_title( '<h3><b>', retrieve_var1_replacement().'</b></h3>' ); ?></td>
 		</tr>
 
 	<?php if ( $display_dimensions && $product->has_weight() ) : ?>
@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						$value_name = esc_html( $attribute_value->name );
 
 						if ( $attribute_taxonomy->attribute_public ) {
-							$values[] = '<h3><a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a></h3>';
+							$values[] = '<h3><b><a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a></b></h3>';
 						} else {
 							$values[] = $value_name;
 						}
