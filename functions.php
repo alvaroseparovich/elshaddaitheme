@@ -64,24 +64,6 @@ function wc_elshaddai_sfield( $fields ) {
     return $fields;}
 add_filter( 'woocommerce_shipping_fields', 'wc_elshaddai_sfield' );
 
-//Adiciona %%produtoSeo%% no YOAST SEO quando adicionado esta tag, se possivel pega o autor, caso contrario editora.
-/*function retrieve_var2_replacement( $var1 ) {
-  if( is_product() ){
-
-      if(wp_get_post_terms(get_post()->ID , 'pa_extencao') && is_array(wp_get_post_terms(get_post()->ID , 'pa_extencao')) ){
-        $complement = wp_get_post_terms(get_post()->ID , 'pa_extencao')[0]->name;
-      }elseif(wp_get_post_terms(get_post()->ID , 'pa_autor') && is_array(wp_get_post_terms(get_post()->ID , 'pa_autor')) ){
-    		$complement = wp_get_post_terms(get_post()->ID , 'pa_autor')[0]->name;
-    	}elseif(wp_get_post_terms(get_post()->ID , 'pa_editora') && is_array(wp_get_post_terms(get_post()->ID , 'pa_editora')) ){
-        $complement = wp_get_post_terms(get_post()->ID , 'pa_editora')[0]->name;
-      }else{
-    		return ' ';
-    	}
-        $title_compl = ' | ' . $complement;
-    }
-	return $title_compl;
-}*/
-
 function retrieve_var1_replacement( $especial_attribute=0, $all=0 ) {
   //only run on products
   if( !is_product() ){return;}
