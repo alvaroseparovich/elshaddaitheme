@@ -21,6 +21,8 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <script>
 window.addEventListener('load', function(){
+
+  //TODO: Organizar a logica para http e https
     var allimages= document.getElementsByTagName('img');
     for (var i=0; i<allimages.length; i++) {
         if (allimages[i].getAttribute('data-src')) {

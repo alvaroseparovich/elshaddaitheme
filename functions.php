@@ -79,7 +79,6 @@ function retrieve_var1_replacement( $especial_attribute=0, $all=0 ) {
     }
   return;
   }
-
   //run this if $var1 is left empty
   $terms = array( 'pa_extencao','pa_autor','pa_editora' );
   $pr_id = get_post()->ID;
@@ -122,8 +121,6 @@ add_action( 'woocommerce_single_product_summary', 'intro_block_summary', 12 );
 add_action( 'woocommerce_single_product_summary', 'finish_block_summary', 39 );
 
 function intro_block_summary(){
-  echo'<div class="bl-summary">';
-}
+  echo'<div class="bl-summary">';}
 function finish_block_summary(){
-  echo'</div>';
-}
+  echo'</div>';}

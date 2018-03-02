@@ -33,25 +33,25 @@ echo '<div class="title line"> Nome: ';
 the_title( '<h2><i>', retrieve_var1_replacement().'</i></h2>' );
 echo '</div>';
 
-$retrieve = retrieve_var1_replacement('pa_autor',1);
+$retrieve = wp_get_post_terms( $post_id , 'pa_autor');
 if($retrieve){
 	echo '<div class="autor line"> Autor:';
 	foreach ($retrieve as $key => $value) {
-		echo ' <buttom><h2><a href="'. esc_url( get_term_link( $value, 'pa_autor' ) ) . '">';
-		echo $value . '</a></h2></buttom> ';
+		echo ' <buttom><h2><a href="'.get_term_link( $value->slug, 'pa_autor' ) . '">';
+		echo $value->name . '</a></h2></buttom> ';
 	}
 	echo'</h2></div>';
 }
 
-$retrieve = retrieve_var1_replacement('pa_editora',1);
+$retrieve = wp_get_post_terms( $post_id , 'pa_editora');
 if($retrieve){
 	echo '<div class="editora line"> Editora:';
 	foreach ($retrieve as $key => $value) {
-		echo ' <buttom><h2><a href="'. esc_url( get_term_link( $value , 'pa_editora' ) ) . '">';
-		echo $value . '</a></h2></buttom> ';
+		echo ' <buttom><h2><a href="'. get_term_link( $value->slug , 'pa_editora' ) . '">';
+		echo $value->name . '</a></h2></buttom> ';
 	}
 	echo'</h2></div>';
-	}
+}
 
 echo '</div>';
 	?>
