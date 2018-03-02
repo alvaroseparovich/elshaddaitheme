@@ -67,16 +67,22 @@ add_filter( 'woocommerce_shipping_fields', 'wc_elshaddai_sfield' );
 function retrieve_var1_replacement( $especial_attribute=0, $all=0 ) {
   //only run on products
   if( !is_product() ){return;}
+  if (is_object($all) or is_array($all)) {
+    $all = 0;
+  }
 
   //run this if $var1 recived a term
-  if($especial_attribute){
+  if($especial_attribute && $especial_attribute != 'produtoSeo'){
+    print_r($especial_attribute);
     $post_term = wp_get_post_terms(get_post()->ID , $especial_attribute);
     if( $post_term && is_array($post_term) ){
       if ($all) {
         return get_all_array_term($post_term);
+      }else{
+        return ' | '.$post_term[0]->name;
       }
-      return ' | '.$post_term[0]->name;
     }
+    print_r($post_term);
   return;
   }
   //run this if $var1 is left empty

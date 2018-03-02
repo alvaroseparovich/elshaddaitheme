@@ -52,12 +52,6 @@ if($retrieve){
 	}
 	echo'</h2></div>';
 }
-
-		if ( $post->post_excerpt ) {
-			echo '<h2><i>';
-			echo apply_filters( 'woocommerce_short_description', $post->post_excerpt );
-			echo '</i></h2>';
-		}
 echo '</div>';
 	?>
 
