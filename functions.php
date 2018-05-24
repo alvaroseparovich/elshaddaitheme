@@ -31,10 +31,16 @@ if ( ! function_exists( 'estore_setup' ) ) :
 function estore_1setup() {
    // Cropping the images to different sizes to be used in the theme
 	add_image_size( 'estore-medium-image111', 240, 240);
-	add_image_size( 'elshaGrid1', 90, 90);
+	add_image_size( 'elshaGrid1', 110, 120);
+
+  // Cropping the images to different sizes to be used in the theme **************REMOVE*****************
+ remove_image_size( 'estore-featured-image');
+ remove_image_size( 'estore-product-grid');
+ remove_image_size( 'estore-square');
+ remove_image_size( 'estore-slider');
 }
 endif; // estore_setup
-add_action( 'after_setup_theme', 'estore_1setup' );
+add_action( 'after_setup_theme', 'estore_1setup', 11 );
 
 
 //reduz estoque no boleto pagarme

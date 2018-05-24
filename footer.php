@@ -104,13 +104,7 @@
 
 				<img class="pg " src="//elshaddai.com.br/wp-content/uploads/2017/01/Bandeiras-Boleto.gif" scale="0">
 			</div>
-		</section><section id="text-24" class="widget widget_text"><h4 class="widget-title"><span>Segurança</span></h4>   <div class="textwidget"><div class="godaddy"><span id="siteseal"><a href="https://seal.godaddy.com/verifySeal?sealID=CJl6qiK2VuSOLf3YteMtcIa9cTLpwuHcFy6VQbaRtIZHfMZXxxNsqna2D189">
-			<img src="https://elshaddai.com.br/wp-content/uploads/2017/04/siteseal_gd_3_h_d_m4.gif" scale="0"></a></span></div><style>.godaddy{width:90%;}
-			@media (max-width: 767px){
-				#siteseal img{margin: auto;;}
-			}
-		</style></div>
-	</section>     </div>
+		</section> </div>
 
 </div>
 </div>
