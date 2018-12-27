@@ -1161,3 +1161,8 @@ form.woocommerce-shipping-calculator>p {
 p#calc_shipping_city_field, p#calc_shipping_state_field {
     display: none!important;
 }
+label[for="billing_address_2"].screen-reader-text {
+  height: auto;
+  overflow: visible;
+  display: block;
+  position: relative!important;}
