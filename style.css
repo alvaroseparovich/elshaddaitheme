@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*
+                  /*
  Theme Name:   El-Shaddai eStore Child
  Theme URI:    http://elshaddai.com.br/
  Description:  El-Shaddai eStore Child
@@ -792,7 +792,7 @@ div#review_form_wrapper {
     width: 182%;
     max-width: 200%; } }
 .woocommerce-checkout #payment:before {
-  content: "*Pagamento em Boleto Bancário Disponíveis em compras de no mínimo R$70,00.";
+  content: "*Pagamento em Boleto Bancário Disponíveis em compras de no mínimo R$ 70,00.";
   color: coral;
   padding: 10px; }
 
@@ -1110,8 +1110,11 @@ figure.banner-adaptive-img {
 .woocommerce form .form-row.woocommerce-invalid .select2-container, .woocommerce form .form-row.woocommerce-invalid input.input-text, .woocommerce form .form-row.woocommerce-invalid select {
   background: #ffa6a6; }
 
-.woocommerce div div.product p.stock{display: inline-block;}
-.banner-adaptive-img img {display: inline;}
+.woocommerce div div.product p.stock {
+  display: inline-block; }
+
+.banner-adaptive-img img {
+  display: inline; }
 
 .featured-slider {
   visibility: visible;
@@ -1121,48 +1124,48 @@ figure.banner-adaptive-img {
   height: 450px; }
 
 /*# sourceMappingURL=style.css.map */
-
 .product-template-default.single.single-product .page-header.clearfix {
-    padding: 0;
-    margin: 0;
-background:white;
-}
+  padding: 0;
+  margin: 0;
+  background: white; }
 
 .product-template-default.single.single-product h3.entry-title {
-    display: none;
-}
-.archive-grid h1.entry-title{
-    padding: 0;
-    margin: 0 0 1em;
-}
+  display: none; }
+
+.archive-grid h1.entry-title {
+  padding: 0;
+  margin: 0 0 1em; }
+
 .page-header .tg-container .term-description {
-    display: block;
-}
+  display: block; }
+
 .woocommerce-checkout .woocommerce table.shop_table tr.shipping {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background: #fff !important;
-    width: 143% !important;
-}
-.woocommerce-checkout .woocommerce table.shop_table.woocommerce-checkout-review-order-table tr.shipping>th {
-    width: 100%;
-    border-right: 0;
-}
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #fff !important;
+  width: 143% !important; }
+
+.woocommerce-checkout .woocommerce table.shop_table.woocommerce-checkout-review-order-table tr.shipping > th {
+  width: 100%;
+  border-right: 0; }
+
 .woocommerce-page.woocommerce-checkout .woocommerce-checkout #order_review {
-    padding: 0;
-}
+  padding: 0; }
+
 .shipping-calculator-form {
-    display: block!important;
-}
-form.woocommerce-shipping-calculator>p {
-    margin: 10px 0 0;
-}
+  display: block !important; }
+
+form.woocommerce-shipping-calculator > p {
+  margin: 10px 0 0; }
+
 p#calc_shipping_city_field, p#calc_shipping_state_field {
-    display: none!important;
-}
+  display: none !important; }
+
 label[for="billing_address_2"].screen-reader-text {
   height: auto;
   overflow: visible;
   display: block;
-  position: relative!important;}
+  position: relative !important; }
+
+/*# sourceMappingURL=style.css.map */
