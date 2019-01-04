@@ -60,15 +60,22 @@ add_action( 'woocommerce_checkout_order_processed', 'compra_com_boleto_reserva_e
 function wc_elshaddai_bfield( $fields ) {
     $fields['billing_number']['maxlength'] = 5;
     $fields['billing_address_2']['maxlength'] = 30;
+    $fields['billing_address_2']['label_class'] = array('');    
     $fields['billing_neighborhood']['required'] = true;
     return $fields;}
 add_filter( 'woocommerce_billing_fields', 'wc_elshaddai_bfield' );
 function wc_elshaddai_sfield( $fields ) {
     $fields['shipping_number']['maxlength'] = 5;
     $fields['shipping_address_2']['maxlength'] = 30;
+    $fields['shipping_address_2']['label_class'] = array('');  
     $fields['shipping_neighborhood']['required'] = true;
     return $fields;}
 add_filter( 'woocommerce_shipping_fields', 'wc_elshaddai_sfield' );
+function wc_elshaddai_ordernote( $fields ) {
+     unset($fields['order']['order_comments']);
+     return $fields;}
+add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
+
 
 function retrieve_var1_replacement( $especial_attribute=0, $all=0 ) {
   //only run on products
