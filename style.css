@@ -1168,4 +1168,6 @@ label[for="billing_address_2"].screen-reader-text {
   display: block;
   position: relative !important; }
 
+.woocommerce div.product form.cart .button {
+  float: right;}
 /*# sourceMappingURL=style.css.map */
