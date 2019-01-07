@@ -82,14 +82,16 @@ function add_cart_buttons(){
   <button class="bt123-" type="button" onclick="removeItem(); return false;">-</button>
   <script> 
   function removeItem(){
-    e = document.querySelector("form.cart > .quantity > input.input-text");n = e.value;newN = n-1;
-      if (!(newN < e.min)){ e.value = parseInt(n)-1; }}
-  
+	e = document.querySelector("form.cart > .quantity > input.input-text");
+	n = e.value;newN = parseInt(n)-1;
+    if (!(newN < e.min)){ e.value = newN; }}
+
   function addItem(){
-    e = document.querySelector("form.cart > .quantity > input.input-text");n = e.value;newN = n+1;
-      if (!(newN > e.max)){ e.value = parseInt(n)+1; }}    
-  
-  </script>
+	e = document.querySelector("form.cart > .quantity > input.input-text");
+	n = e.value;newN = parseInt(n)+1;
+    if (e.max==""){e.value = newN;}
+    if (!(newN > e.max)){ e.value = newN; }} 
+    </script> 
   '
 );
 }
