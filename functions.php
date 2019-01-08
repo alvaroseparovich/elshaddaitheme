@@ -2,6 +2,7 @@
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri().'/style-1.css' );
     wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js-el-shaddai.min.js' );
 }
 
@@ -17,7 +18,6 @@ function custom_dashboard_help() {
   echo '<p>Abrir atributos</p>';
   echo('<a href="'. get_site_url() . '/wp-admin/edit-tags.php?taxonomy=pa_autor&post_type=product" class="button button-primary">Autores</a>');
   echo('<a href="'. get_site_url() . '/wp-admin/edit-tags.php?taxonomy=pa_editora&post_type=product" class="button button-primary">Editoras</a>');
-  //print_r(get_terms('pa_autor'));
 }
 
 if ( ! function_exists( 'estore_setup' ) ) :
