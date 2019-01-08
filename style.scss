@@ -1219,5 +1219,9 @@ label[for="billing_address_2"].screen-reader-text {
   display: block;
   position: relative!important;}
 
-.woocommerce div.product form.cart .button {
-  float: right;}
+.woocommerce div.product form.cart {
+  .button{float: right;}
+  button.btElPlus{float: left;}
+  input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none !important;margin: 0 !important;}
+  input[type="number"] {-moz-appearance: textfield !important;}  
+}

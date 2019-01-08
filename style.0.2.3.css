@@ -1155,5 +1155,13 @@ label[for="billing_address_2"].screen-reader-text {
   position: relative !important; }
 
 .woocommerce div.product form.cart .button {
-  float: right;}
-/*# sourceMappingURL=style.css.map */
+  float: right; }
+.woocommerce div.product form.cart button.btElPlus {
+  float: left; }
+.woocommerce div.product form.cart input[type="number"]::-webkit-outer-spin-button, .woocommerce div.product form.cart input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important; }
+.woocommerce div.product form.cart input[type="number"] {
+  -moz-appearance: textfield !important; }
+
+/*# sourceMappingURL=style.root.css.map */

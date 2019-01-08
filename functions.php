@@ -88,25 +88,16 @@ function wc_elshaddai_ordernote( $fields ) {
      return $fields;}
 add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
 
-function add_cart_buttons(){
-  echo('
-  <button class="bt123+" type="button" onclick="addItem(); return false;">+</button>
-  <button class="bt123-" type="button" onclick="removeItem(); return false;">-</button>
-  <script> 
-  function removeItem(){
-	e = document.querySelector("form.cart .quantity > input.input-text");
-	n = e.value;newN = parseInt(n)-1;
-    if (!(newN < e.min)){ e.value = newN; }}
-
-  function addItem(){
-	e = document.querySelector("form.cart .quantity > input.input-text");
-	n = e.value;newN = parseInt(n)+1;
-    if (e.max==""){e.value = newN;}
-    if (!(newN > e.max)){ e.value = newN; }} 
-    </script> 
-  ');
-}
-add_filter('woocommerce_after_add_to_cart_quantity','add_cart_buttons', 0);
+//Adicionar bottões para almentar unidades e diminuir, na página de Produtos.
+function add_cart_button_less(){echo'<button class="btElLess" type="button" onclick="removeItem(); return false;">-</button>';}
+function add_cart_button_plus(){echo'<button class="btElPlus" type="button" onclick="addItem(); return false;">+</button>';}
+function add_buttons_js_snippet(){echo'<script>
+  function removeItem(){	e = document.querySelector("form.cart .quantity > input.input-text");	n = e.value;newN = parseInt(n)-1;  if (!(newN < e.min)){ e.value = newN; }}
+  function addItem(){	e = document.querySelector("form.cart .quantity > input.input-text");	n = e.value;newN = parseInt(n)+1;  if (e.max==""){e.value = newN;}    if (!(newN > e.max)){ e.value = newN; }} 
+</script>';}
+add_filter('woocommerce_after_add_to_cart_quantity','add_cart_button_less', 0);
+add_filter('woocommerce_before_add_to_cart_quantity','add_cart_button_plus', 0);
+add_action('wp_head', 'add_buttons_js_snippet');
 
 function retrieve_var1_replacement( $especial_attribute=0, $all=0 ) {
   //only run on products
