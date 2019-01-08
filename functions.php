@@ -2,8 +2,20 @@
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri().'/style-1.css' );
+    check_css_archive();
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri().'/style.' . wp_get_theme()->get('Version'). '.css' );
     wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js-el-shaddai.min.js' );
+}
+/* Se qualquer mudança for feita no Css, a versão do thema deve ser atualizada para que nenhum
+ * erro de cache aconteça com os clientes!
+ *  */
+function check_css_archive(){
+  if (!file_exists(get_stylesheet_directory().'/style.' . wp_get_theme()->get('Version'). '.css' )){
+    $newfile = fopen(get_stylesheet_directory().'/style.' . wp_get_theme()->get('Version'). '.css' , "w") or die("Unable to open file!");
+    $txt = fopen( get_stylesheet_directory().'/style.root.css' , "r") or die("Unable to open file!");
+    fwrite($newfile, fread($txt, filesize(get_stylesheet_directory().'/style.root.css')));
+    fclose($newfile);
+  }
 }
 
 require get_stylesheet_directory() . '/inc/widgets.php';
@@ -92,8 +104,7 @@ function add_cart_buttons(){
     if (e.max==""){e.value = newN;}
     if (!(newN > e.max)){ e.value = newN; }} 
     </script> 
-  '
-);
+  ');
 }
 add_filter('woocommerce_after_add_to_cart_quantity','add_cart_buttons', 0);
 
