@@ -89,8 +89,20 @@ function wc_elshaddai_ordernote( $fields ) {
 add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
 
 //Adicionar bottões para almentar unidades e diminuir, na página de Produtos.
-function add_cart_button_less(){echo'<button class="btElLess" type="button" onclick="removeItem(); return false;">-</button>';}
-function add_cart_button_plus(){echo'<button class="btElPlus" type="button" onclick="addItem(); return false;">+</button>';}
+function add_cart_button_less(){ 
+  global $product;
+  if(number_format( $product->stock,0,'','' ) > 1) {
+      echo'<button class="btElLess" type="button" onclick="removeItem(); return false;">-</button>';
+      }
+    }
+function add_cart_button_plus(){ 
+  global $product;
+  if(number_format( $product->stock,0,'','' ) > 1) {
+      echo'<button class="btElPlus" type="button" onclick="addItem(); return false;">+</button>';
+      }
+    }
+
+  
 function add_buttons_js_snippet(){echo'<script>
   function removeItem(){	e = document.querySelector("form.cart .quantity > input.input-text");	n = e.value;newN = parseInt(n)-1;  if (!(newN < e.min)){ e.value = newN; }}
   function addItem(){	e = document.querySelector("form.cart .quantity > input.input-text");	n = e.value;newN = parseInt(n)+1;  if (e.max==""){e.value = newN;}    if (!(newN > e.max)){ e.value = newN; }} 
