@@ -91,13 +91,16 @@ add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
 //Adicionar bottões para almentar unidades e diminuir, na página de Produtos.
 function add_cart_button_less(){ 
   global $product;
-  if(number_format( $product->stock,0,'','' ) > 1) {
+  //echo '<pre>';
+  //var_dump($product->manage_stock);
+  //echo '</pre>';
+  if(number_format( $product->stock,0,'','' ) > 1 or $product->manage_stock=="no") {
       echo'<button class="btElLess" type="button" onclick="removeItem(); return false;">-</button>';
       }
     }
 function add_cart_button_plus(){ 
   global $product;
-  if(number_format( $product->stock,0,'','' ) > 1) {
+  if(number_format( $product->stock,0,'','' ) > 1 or $product->manage_stock=="no") {
       echo'<button class="btElPlus" type="button" onclick="addItem(); return false;">+</button>';
       }
     }
