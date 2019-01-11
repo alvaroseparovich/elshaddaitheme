@@ -1167,4 +1167,7 @@ label[for="billing_address_2"].screen-reader-text {
   p.woocommerce-shipping-destination {
     display: none;
 }
+a.shipping-calculator-button {
+  display: none!important;
+}
 /*# sourceMappingURL=style.root.css.map */
