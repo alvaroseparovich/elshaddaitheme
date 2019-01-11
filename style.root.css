@@ -1164,4 +1164,7 @@ label[for="billing_address_2"].screen-reader-text {
 .woocommerce div.product form.cart input[type="number"] {
   -moz-appearance: textfield !important; }
 
+  p.woocommerce-shipping-destination {
+    display: none;
+}
 /*# sourceMappingURL=style.root.css.map */

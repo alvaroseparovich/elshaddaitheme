@@ -1225,3 +1225,6 @@ label[for="billing_address_2"].screen-reader-text {
   input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none !important;margin: 0 !important;}
   input[type="number"] {-moz-appearance: textfield !important;}  
 }
+p.woocommerce-shipping-destination {
+  display: none;
+}
