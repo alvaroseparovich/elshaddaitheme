@@ -105,7 +105,6 @@ function add_cart_button_plus(){
       }
     }
   
-  
 function add_buttons_js_snippet(){echo'<script>
   function removeItem(){	e = document.querySelector("form.cart .quantity > input.input-text");	n = e.value;newN = parseInt(n)-1;  if (!(newN < e.min)){ e.value = newN; }}
   function addItem(){	e = document.querySelector("form.cart .quantity > input.input-text");	n = e.value;newN = parseInt(n)+1;  if (e.max==""){e.value = newN;}    if (!(newN > e.max)){ e.value = newN; }} 
@@ -185,5 +184,16 @@ function finish_block_summary(){
 //Webhooks não podem ser agendadas Asyncronamente
 add_filter("woocommerce_payment_complet_reduce_order_stock", false);
 add_filter("woocommerce_payment_complete_reduce_order_stock",false);
+add_filter("woocommerce_can_reduce_order_stock", false)
 add_filter("woocommerce_webhook_deliver_async", false);
 
+  //----------------------Thank You Page-----------
+  /*function correct_thank_you_page($text)
+  { global $post;
+    return ".Seu pedido foi recebido! 
+    para verificar o stauts de seu pedido clique no botão abaixo!  
+    <form action='http://google.com'>
+        <button> Pedido </button>
+    </form>". print_r($post)  ;
+  }
+  add_filter('woocommerce_thankyou_order_received_text', 'correct_thank_you_page');*/
