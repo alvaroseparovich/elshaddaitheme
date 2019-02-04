@@ -184,7 +184,7 @@ function finish_block_summary(){
 //Webhooks não podem ser agendadas Asyncronamente
 add_filter("woocommerce_payment_complet_reduce_order_stock", false);
 add_filter("woocommerce_payment_complete_reduce_order_stock",false);
-add_filter("woocommerce_can_reduce_order_stock", false)
+add_filter("woocommerce_can_reduce_order_stock", false);
 add_filter("woocommerce_webhook_deliver_async", false);
 
   //----------------------Thank You Page-----------
