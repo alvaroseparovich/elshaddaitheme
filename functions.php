@@ -180,3 +180,10 @@ function intro_block_summary(){
   echo'<div class="bl-summary">';}
 function finish_block_summary(){
   echo'</div>';}
+
+//Bling passa a atualizar o estoque, Gereciamento do Woocommerce é desativado
+//Webhooks não podem ser agendadas Asyncronamente
+add_filter("woocommerce_payment_complet_reduce_order_stock", false);
+add_filter("woocommerce_payment_complete_reduce_order_stock",false);
+add_filter("woocommerce_webhook_deliver_async", false);
+
