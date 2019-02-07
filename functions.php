@@ -1,4 +1,6 @@
 <?php
+
+
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
@@ -9,6 +11,10 @@ function my_theme_enqueue_styles() {
 /* Se qualquer mudança for feita no Css, a versão do thema deve ser atualizada para que nenhum
  * erro de cache aconteça com os clientes!
  *  */
+
+require get_stylesheet_directory() . '/inc/widgets.php';
+require get_stylesheet_directory() . '/inc/functions-product-summary.php';
+
 function check_css_archive(){
   if (!file_exists(get_stylesheet_directory().'/style.' . wp_get_theme()->get('Version'). '.css' )){
     $newfile = fopen(get_stylesheet_directory().'/style.' . wp_get_theme()->get('Version'). '.css' , "w") or die("Unable to open file!");
@@ -18,7 +24,6 @@ function check_css_archive(){
   }
 }
 
-require get_stylesheet_directory() . '/inc/widgets.php';
 
 //Helper na dash board com  os autores
 add_action('wp_dashboard_setup', 'attributes_on_dashboard_widgets');
@@ -88,31 +93,6 @@ function wc_elshaddai_ordernote( $fields ) {
      return $fields;}
 add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
 
-//Adicionar bottões para almentar unidades e diminuir, na página de Produtos.
-function add_cart_button_less(){ 
-  global $product;
-  //echo '<pre>';
-  //var_dump($product->manage_stock);
-  //echo '</pre>';
-  if(number_format( $product->stock,0,'','' ) > 1 or $product->manage_stock=="no") {
-      echo'<button class="btElLess" type="button" onclick="removeItem(); return false;">-</button>';
-      }
-    }
-function add_cart_button_plus(){ 
-  global $product;
-  if(number_format( $product->stock,0,'','' ) > 1 or $product->manage_stock=="no") {
-      echo'<button class="btElPlus" type="button" onclick="addItem(); return false;">+</button>';
-      }
-    }
-  
-function add_buttons_js_snippet(){echo'<script>
-  function removeItem(){	e = document.querySelector("form.cart .quantity > input.input-text");	n = e.value;newN = parseInt(n)-1;  if (!(newN < e.min)){ e.value = newN; }}
-  function addItem(){	e = document.querySelector("form.cart .quantity > input.input-text");	n = e.value;newN = parseInt(n)+1;  if (e.max==""){e.value = newN;}    if (!(newN > e.max)){ e.value = newN; }} 
-</script>';}
-add_filter('woocommerce_after_add_to_cart_quantity','add_cart_button_less', 0);
-add_filter('woocommerce_before_add_to_cart_quantity','add_cart_button_plus', 0);
-add_action('wp_head', 'add_buttons_js_snippet');
-
 function retrieve_var1_replacement( $especial_attribute=0, $all=0 ) {
   //only run on products
   if( !is_product() ){return;}
@@ -161,24 +141,6 @@ function register_my_plugin_extra_replacements() {
 }
 add_action( 'wpseo_register_extra_replacements', 'register_my_plugin_extra_replacements' );
 
-/*product page*/
-/*
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );*/
-
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 15 );
-add_action( 'woocommerce_single_product_summary', 'intro_block_summary', 12 );
-add_action( 'woocommerce_single_product_summary', 'finish_block_summary', 39 );
-
-function intro_block_summary(){
-  echo'<div class="bl-summary">';}
-function finish_block_summary(){
-  echo'</div>';}
 
 //Bling passa a atualizar o estoque, Gereciamento do Woocommerce é desativado
 //Webhooks não podem ser agendadas Asyncronamente
