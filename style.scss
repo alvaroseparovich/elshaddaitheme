@@ -1073,7 +1073,6 @@ figure.banner-adaptive-img {
 .single-product.woocommerce-page div.product{
   &.product-type-variable .cart {
     vertical-align: bottom;
-    margin: 0 5px 10px;
     width: 100%
   }
   
@@ -1129,13 +1128,13 @@ figure.banner-adaptive-img {
     color: #3e8a3e;
     background: #e1e1e1;}
     .counter{
-      background: #00A9E0;
+      background: #0076dd;
       margin: 1em 0;
       width: 49%;
       height: 41px;
       padding: 2px;
+      justify-content: center;
       display: flex;
-      justify-content: space-around;
       border-radius: 4px;
     }
     .single_add_to_cart_button {
@@ -1156,9 +1155,8 @@ figure.banner-adaptive-img {
       font-size: 1.9em;
       font-weight: bold;
       background: none;
-      padding: 10px 9%;
+      padding: 10px 10%;
     }
-    button.btElPlus{float: left;}
     input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none !important;margin: 0 !important;}
     input[type="number"] {-moz-appearance: textfield !important;}  
   }
@@ -1175,7 +1173,15 @@ figure.banner-adaptive-img {
     height: max-content;
     line-height: 1em;
   }
+  a.xoo-wl-btn.button.btn {
+    border-radius: 5px;
+    margin: 2px 0;
+    width: 100%;
+  }
 } 
+.single_variation_wrap,.woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-enabled,.woocommerce-variation.single_variation,.woocommerce-variation-availability{
+  width: 100%;
+}
 
 @media only screen and (max-width: 480px){
   .bl-summary .bl-p1, .bl-summary .bl-p2{
