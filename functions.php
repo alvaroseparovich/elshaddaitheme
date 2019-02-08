@@ -4,8 +4,7 @@
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-    check_css_archive();
-    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri().'/style.' . wp_get_theme()->get('Version'). '.css' );
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri().'/style.0.2.5.css' );
     wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js-el-shaddai.min.js' );
 }
 /* Se qualquer mudança for feita no Css, a versão do thema deve ser atualizada para que nenhum
@@ -15,14 +14,6 @@ function my_theme_enqueue_styles() {
 require get_stylesheet_directory() . '/inc/widgets.php';
 require get_stylesheet_directory() . '/inc/functions-product-summary.php';
 
-function check_css_archive(){
-  if (!file_exists(get_stylesheet_directory().'/style.' . wp_get_theme()->get('Version'). '.css' )){
-    $newfile = fopen(get_stylesheet_directory().'/style.' . wp_get_theme()->get('Version'). '.css' , "w") or die("Unable to open file!");
-    $txt = fopen( get_stylesheet_directory().'/style.root.css' , "r") or die("Unable to open file!");
-    fwrite($newfile, fread($txt, filesize(get_stylesheet_directory().'/style.root.css')));
-    fclose($newfile);
-  }
-}
 
 
 //Helper na dash board com  os autores
