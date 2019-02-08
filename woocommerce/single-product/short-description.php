@@ -51,7 +51,6 @@ if($retrieve and !is_wp_error($retrieve) ){
 	}
 	echo'</h2></div>';
 }
-echo '</div>';
-	?>
-
+?>
+</div>
 </div>
