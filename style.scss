@@ -1151,11 +1151,13 @@ figure.banner-adaptive-img {
       background: linear-gradient(45deg, #375924 0%,#1c6b18 29%,#074200 54%,#228e3f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#375924', endColorstr='#228e3f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     }
+    button.btElPlus {
+      float: left;
+      }
     button.btElPlus,button.btElLess{
       font-size: 1.9em;
       font-weight: bold;
-      background: none;
-      padding: 10px 10%;
+      background: rgba(0,0,0,0) 
     }
     input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none !important;margin: 0 !important;}
     input[type="number"] {-moz-appearance: textfield !important;}  
