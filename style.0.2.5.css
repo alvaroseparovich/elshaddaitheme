@@ -1109,7 +1109,11 @@ figure.banner-adaptive-img {
 .single-product.woocommerce-page div.product a.xoo-wl-btn.button.btn {
   border-radius: 5px;
   margin: 2px 0;
-  width: 100%; }
+  width: 100%;
+  white-space: normal;
+  height: auto;
+  line-height: 1.3em;
+  padding: 0.6em 0.5em; }
 
 .single_variation_wrap, .woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-enabled, .woocommerce-variation.single_variation, .woocommerce-variation-availability {
   width: 100%; }
