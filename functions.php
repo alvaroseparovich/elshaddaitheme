@@ -13,6 +13,7 @@ function my_theme_enqueue_styles() {
 
 require get_stylesheet_directory() . '/inc/widgets.php';
 require get_stylesheet_directory() . '/inc/functions-product-summary.php';
+require get_stylesheet_directory() . '/woocommerce/archives-elshaddai/index.php';
 
 
 

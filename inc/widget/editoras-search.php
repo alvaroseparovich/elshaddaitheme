@@ -28,17 +28,26 @@ class Autor_Search_Widget extends WP_Widget {
     );
 
     //===================================
-    function search_widget_form( $start_num=0 , $placeholder="Procure o livro ou autor..." ){
+    function search_widget_form( $args , $start_num=0 , $placeholder="Procure o livro ou autor..." ){
 
         $url_arr = explode( "/" , substr($_SERVER['REQUEST_URI'] , 1 , -1 ) ) ;
 
         if( $url_arr[$start_num] == 'editora') {
 
-            $elements = '<div class="search-block"><form role="search" method="get" class="searchform" action="' . esc_url( home_url( '/'.$url_arr[$start_num].'/'.$url_arr[ $start_num + 1 ].'/' ) ) . '">';
-            $elements .= '<input  id="menu-search" type="search" class="search-field basileia-search" placeholder="'.$placeholder.'" value="'.esc_attr( get_search_query()).'" name="s"><button id="searchsubmit" type="submit" class="fa fa-search" name="pos  t_type" value="product"></button></form></div>';
+            $elements = '<div id="button-return-editora"></div>';
+            $elements =  $args['before_widget'];
+            $elements .= '<div class="search-block"><form role="search" method="get" class="searchform" action="' . esc_url( home_url( '/'.$url_arr[$start_num].'/'.$url_arr[ $start_num + 1 ].'/' ) ) . '">';
+            $elements .= '<input  id="menu-search" type="search" class="search-field basileia-search" placeholder="'.$placeholder.'" value="'.esc_attr( get_search_query()).'" name="s"><button id="searchsubmit" type="submit" class="fa fa-search" name="post_type" value="product"></button></form></div>';
+            $elements .= $args['after_widget'];
+            
             return $elements;
+
         }else{
-            $button_return = "";
+
+            //Retornar para a editora
+            $button_return = '<div id="button-return-editora"></div>';
+
+            return $button_return;
         }
     }
 
@@ -72,15 +81,12 @@ class Autor_Search_Widget extends WP_Widget {
 
         if($url_arr[0] == "wordpress"){
 
-            echo $args['before_widget'];
-            echo $this->search_widget_form( $start_num = 1 );
-            echo $args['after_widget'];
+            echo $this->search_widget_form( $args, $start_num = 1 );
 
         }else{
 
-            echo $args['before_widget'];
-            echo $this->search_widget_form();
-            echo $args['after_widget'];
+            echo $this->search_widget_form($args);
+
         }
     }
 }
