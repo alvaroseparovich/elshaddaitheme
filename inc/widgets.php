@@ -1,13 +1,10 @@
 <?php
-/**
- * Contains all the functions related to sidebar and widget.
- *
- * @package ThemeGrill
- * @subpackage estore
- * @since estore 1.0
- */
+
+require get_stylesheet_directory() . '/inc/widget/editoras-autores-especial.php';
+require get_stylesheet_directory() . '/inc/widget/editoras-search.php';
 
 add_action( 'widgets_init', 'estore_child_widgets_init' );
+
 
 //Widgets Principal page 1
 register_sidebar( array(
@@ -19,6 +16,7 @@ register_sidebar( array(
 register_sidebar( array(
 	'name'=> esc_html__( 'Nicho 1: Corpo', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_1_corpo_da_pagina','description'=> '','before_widget'=> '<section id="%1$s" class="widget %2$s">','after_widget'=> '</section>','before_title'=> '<h4 class="widget-title">','after_title'=> '</h4>'
 ) );
+
 //Widgets Principal page 2
 register_sidebar( array('name'=> esc_html__( 'Nicho 2: Banner Principal', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_2_banner_principal','description'   => '','before_widget' => '<section id="%1$s" class="widget %2$s">','after_widget'  => '</section>','before_title'  => '<h4 class="widget-title">','after_title'   => '</h4>'
 ) );
@@ -28,6 +26,7 @@ register_sidebar( array(
 register_sidebar( array(
 	'name'=> esc_html__( 'Nicho 2: Corpo', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_2_corpo_da_pagina','description'=> '','before_widget'=> '<section id="%1$s" class="widget %2$s">','after_widget'=> '</section>','before_title'=> '<h4 class="widget-title">','after_title'=> '</h4>'
 ) );
+
 //Widgets Principal page 3
 register_sidebar( array(
 	'name'=> esc_html__( 'Nicho 3: Banner Principal', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_3_banner_principal','description'=> '','before_widget'=> '<section id="%1$s" class="widget %2$s">','after_widget'=> '</section>','before_title'=> '<h4 class="widget-title">','after_title'=> '</h4>'
@@ -43,6 +42,7 @@ function wpdocs_remove_widgets() {
   unregister_widget( 'WP_Widget_Calendar' );  unregister_widget( 'WP_Widget_Archives' );  unregister_widget( 'WP_Widget_Links' );  unregister_widget( 'WP_Widget_Meta' );  unregister_widget( 'WP_Widget_Recent_Posts' );  unregister_widget( 'WP_Widget_Recent_Comments' );  unregister_widget( 'WP_Widget_RSS' );  unregister_widget( 'WP_Widget_Tag_Cloud' );  unregister_widget( 'WP_Widget_media_video' );  unregister_widget( 'WP_Widget_media_gallery' );
 }
 add_action( 'widgets_init', 'wpdocs_remove_widgets' );
+
 function remove_some_widgets(){
 	// Unregister some of the TwentyTen sidebars
 	unregister_sidebar( 'estore_footer_sidebar1' );	unregister_sidebar( 'estore_footer_sidebar2' );	unregister_sidebar( 'estore_footer_sidebar3' );	unregister_sidebar( 'estore_footer_sidebar4' );
@@ -1030,7 +1030,8 @@ class estore_child_woocommerce_product_attribute_grid extends WP_Widget {
 		}
 	}
 
-// Estore WooCommerce Product Carousel Widget
+
+	// Estore WooCommerce Product Carousel Widget
 class estore_child_woocommerce_product_attribute_carousel extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
