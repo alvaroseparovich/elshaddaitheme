@@ -104,12 +104,41 @@ class editora_autor_especial_widget_elshaddai extends WP_Widget {
 							echo'<li><a href="' . $autor[1] . '" rel="noopener noreferrer">' . $autor[0] . ' (' . $autor[2] . ')</a></li>';	
 
 						}
-						if( $i == $number_of_names ){echo "<button>Mastrar mais</button>";}
 						$i++;
+						if( $i == sizeof($list_of_autors) ){echo '<button id="btn-show-hide-autor" onclick="autores_show_hide()">Mastrar mais</button>';}
 					}
 
 					?>
 				</ul>
+				<script>
+					function atualizaButton(key,arr,text){
+
+						if(arr.length == key+1){
+							document.querySelector("#btn-show-hide-autor").innerText = text;
+						}
+					}
+					
+					function changeStyle(element , key, arr) {
+						
+						if( element.style.display == 'none' ){
+
+							element.style.display = 'list-item';
+							atualizaButton(key,arr,"Mostrar menos");
+
+						}else{
+							
+							element.style.display = 'none';
+							atualizaButton(key,arr,"Mostrar mais");
+							
+							}
+						}
+
+						function autores_show_hide(){
+							nodeList = document.querySelectorAll(".autor-limit");
+							autoresList = Array.prototype.slice.call(nodeList);
+							autoresList.forEach(changeStyle);
+						}
+				</script>
 				<?php
 			
 			$featured_query = new WP_Query( $args );

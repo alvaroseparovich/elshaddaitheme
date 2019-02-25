@@ -44,7 +44,7 @@
   text-align: center;
   font-size: 1.2em;
   color: white;
-  margin-left: 10px 0;
+  margin: 3px 0;
   height: 3em;
   line-height: 3em;
   border-radius: 0.6em; }
@@ -1235,5 +1235,8 @@ p.woocommerce-shipping-destination {
 
 a.shipping-calculator-button {
   display: none !important; }
+
+#btn-show-hide-autor {
+  margin: 1em; }
 
 /*# sourceMappingURL=style.0.2.5.css.map */
