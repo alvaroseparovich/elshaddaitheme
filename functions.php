@@ -16,6 +16,23 @@ require get_stylesheet_directory() . '/inc/functions-product-summary.php';
 require get_stylesheet_directory() . '/woocommerce/archives-elshaddai/index.php';
 
 
+function shortcode_to_be_added( $arg ){
+
+  echo do_shortcode( "[".$arg['shortcode']."]" ) ;
+  return;
+
+}
+
+function shortcode_to_add( $atts ) {
+
+  add_action("especial_space_to_widgets", function() use ( $atts ) { shortcode_to_be_added( $atts ); });
+
+  return ;
+  
+}
+
+add_shortcode( 'before_loop', 'shortcode_to_add' );
+
 
 //Helper na dash board com  os autores
 add_action('wp_dashboard_setup', 'attributes_on_dashboard_widgets');
