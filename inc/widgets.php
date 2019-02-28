@@ -6,38 +6,6 @@ require get_stylesheet_directory() . '/inc/widget/editoras-search.php';
 add_action( 'widgets_init', 'estore_child_widgets_init' );
 
 
-//Widgets Principal page 1
-register_sidebar( array(
-	'name'=> esc_html__( 'Nicho 1: Banner Principal', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_1_banner_principal','description'   => '','before_widget' => '<section id="%1$s" class="widget %2$s">','after_widget'  => '</section>','before_title'  => '<h4 class="widget-title">','after_title'   => '</h4>'
-) );
-register_sidebar( array(
-	'name'=> esc_html__( 'Nicho 1: Lateral Banner', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_1_lateral_do_banner','description'=> '','before_widget'=> '<section id="%1$s" class="widget %2$s">','after_widget'=> '</section>','before_title'=> '<h4 class="widget-title">','after_title'=> '</h4>'
-) );
-register_sidebar( array(
-	'name'=> esc_html__( 'Nicho 1: Corpo', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_1_corpo_da_pagina','description'=> '','before_widget'=> '<section id="%1$s" class="widget %2$s">','after_widget'=> '</section>','before_title'=> '<h4 class="widget-title">','after_title'=> '</h4>'
-) );
-
-//Widgets Principal page 2
-register_sidebar( array('name'=> esc_html__( 'Nicho 2: Banner Principal', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_2_banner_principal','description'   => '','before_widget' => '<section id="%1$s" class="widget %2$s">','after_widget'  => '</section>','before_title'  => '<h4 class="widget-title">','after_title'   => '</h4>'
-) );
-register_sidebar( array(
-	'name' => esc_html__( 'Nicho 2: Lateral Banner', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_2_lateral_do_banner','description'   => '','before_widget' => '<section id="%1$s" class="widget %2$s">','after_widget'  => '</section>','before_title'  => '<h4 class="widget-title">','after_title'   => '</h4>'
-) );
-register_sidebar( array(
-	'name'=> esc_html__( 'Nicho 2: Corpo', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_2_corpo_da_pagina','description'=> '','before_widget'=> '<section id="%1$s" class="widget %2$s">','after_widget'=> '</section>','before_title'=> '<h4 class="widget-title">','after_title'=> '</h4>'
-) );
-
-//Widgets Principal page 3
-register_sidebar( array(
-	'name'=> esc_html__( 'Nicho 3: Banner Principal', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_3_banner_principal','description'=> '','before_widget'=> '<section id="%1$s" class="widget %2$s">','after_widget'=> '</section>','before_title'=> '<h4 class="widget-title">','after_title'=> '</h4>'
-) );
-register_sidebar( array(
-	'name'=> esc_html__( 'Nicho 3: Lateral Banner', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_3_lateral_do_banner','description'   => '','before_widget' => '<section id="%1$s" class="widget %2$s">','after_widget'  => '</section>','before_title'  => '<h4 class="widget-title">','after_title'   => '</h4>'
-) );
-register_sidebar( array(
-	'name'=> esc_html__( 'Nicho 3: Corpo', 'elshaddai-estore-child' ),'id'=> 'elshaddai_nicho_3_corpo_da_pagina','description'   => '','before_widget' => '<section id="%1$s" class="widget %2$s">','after_widget'=> '</section>','before_title'  => '<h4 class="widget-title">','after_title'   => '</h4>'
-) );
-
 function wpdocs_remove_widgets() {
   unregister_widget( 'WP_Widget_Calendar' );  unregister_widget( 'WP_Widget_Archives' );  unregister_widget( 'WP_Widget_Links' );  unregister_widget( 'WP_Widget_Meta' );  unregister_widget( 'WP_Widget_Recent_Posts' );  unregister_widget( 'WP_Widget_Recent_Comments' );  unregister_widget( 'WP_Widget_RSS' );  unregister_widget( 'WP_Widget_Tag_Cloud' );  unregister_widget( 'WP_Widget_media_video' );  unregister_widget( 'WP_Widget_media_gallery' );
 }
@@ -49,10 +17,6 @@ function remove_some_widgets(){
 }
 add_action( 'widgets_init', 'remove_some_widgets', 11 );
 
-/**
- * Register widget area.
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
 function estore_child_widgets_init() {
 
 	// Widgets Registration
@@ -201,7 +165,7 @@ class estore_child_woocommerce_product_carousel extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget-featured-collection featured-collection-color clearfix',
-			'description' => esc_html__( 'Show WooCommerce Featured Products Carousel.', 'estore' )
+			'description' => esc_html__( 'Show WooCommerce Featured Products Carousel. (DEPRECATED)', 'estore' )
 		);
 		$control_ops = array(
 			'width'  => 200,
@@ -442,7 +406,7 @@ class estore_child_woocommerce_product_grid extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'widget-collection clearfix',
-			'description' => esc_html__( 'Show WooCommerce Featured Products Grid.', 'estore' )
+			'description' => esc_html__( 'Show WooCommerce Featured Products Grid (DEPRECATED).', 'estore' )
 		);
 		$control_ops = array(
 			'width'  => 200,
