@@ -1297,4 +1297,7 @@ div.widgets_on_page > ul {
 .page-header {
   margin-bottom: 0; }
 
+body.home section {
+  margin-top: 0px; }
+
 /*# sourceMappingURL=style-sheet.css.map */
