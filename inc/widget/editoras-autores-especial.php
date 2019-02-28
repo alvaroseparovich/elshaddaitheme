@@ -65,6 +65,7 @@ class editora_autor_especial_widget_elshaddai extends WP_Widget {
 			<h3 class="widget-title"><span><?php if($title){echo $title;}else{echo 'Autor da Editora';} ?></span></h3>
 		
 			<?php
+				print_r($_SERVER['REQUEST_URI']);
 
 				$url_arr = explode( "/" , substr($_SERVER['REQUEST_URI'] , 1 , -1 ) ) ;
 
@@ -72,11 +73,12 @@ class editora_autor_especial_widget_elshaddai extends WP_Widget {
 				$editora = array(
 					'post_type' => 'product',
 					'orderby'   => 'date',
-					'tax_query' => array(
-						'taxonomy'  => 'pa_autor',
-						'field'     => 'id',
-						'terms'     => $url_arr[1],
-					)
+					'tax_query' => array(array(
+						'taxonomy'  => 'pa_editora',
+						'field'     => 'slug',
+						'terms'     => 'pes',
+						'operator'        => 'IN',
+					))
 				);
 
 				$list_of_autors = array();
@@ -105,7 +107,7 @@ class editora_autor_especial_widget_elshaddai extends WP_Widget {
 
 						}
 						$i++;
-						if( $i == sizeof($list_of_autors) ){echo '<button id="btn-show-hide-autor" onclick="autores_show_hide()">Mastrar mais</button>';}
+						if( $i == sizeof($list_of_autors) && ($i >= $number_of_names)){echo '<button id="btn-show-hide-autor" onclick="autores_show_hide()">Mostrar mais</button>';}
 					}
 
 					?>
