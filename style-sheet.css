@@ -189,7 +189,7 @@ body #main .cart-wishlist-btn > a.button, #content section .cart-wishlist-btn > 
   background: white;
   padding: 0; }
 body #main .tg-container, #content section .tg-container {
-  padding: 15px; }
+  padding: 15px 0; }
 
 .product-ban a.slider-btn {
   float: left; }
@@ -1223,7 +1223,7 @@ figure.banner-adaptive-img {
     margin-bottom: -4px; }
 
 #top_slider_section {
-  margin: 12px 0; }
+  margin: 0; }
 
 .banner-adaptive-img img {
   display: inline; }
