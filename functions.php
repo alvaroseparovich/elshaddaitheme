@@ -18,7 +18,7 @@ require get_stylesheet_directory() . '/inc/img-functions.php';
 //functions related to YoastSEO
 require get_stylesheet_directory() . '/inc/yoast-seo-functions.php';
 
-//Fuctions substituted from main parent theme
+//Fuctions substituted from main parent theme or added
 require get_stylesheet_directory() . '/woocommerce/archives-elshaddai/index.php';
 
 

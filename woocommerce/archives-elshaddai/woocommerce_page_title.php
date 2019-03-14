@@ -36,3 +36,10 @@ function woocommerce_page_title( $echo = true ) {
         return $page_title;
     }
 }
+
+
+add_action( 'woocommerce_after_main_content', 'archives_seo_text' );
+function archives_seo_text(){
+    $page_id = get_queried_object_id();
+    echo get_option( "taxonomy_term_{$page_id}" )['description_el'];
+}
