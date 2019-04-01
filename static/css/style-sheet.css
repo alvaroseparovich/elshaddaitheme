@@ -1300,4 +1300,16 @@ div.widgets_on_page > ul {
 body.home section {
   margin-top: 0px; }
 
+.single.single-product .woocommerce ul.products {
+  padding: 0; }
+  .single.single-product .woocommerce ul.products li.product {
+    margin-bottom: 5px; }
+    @media (max-width: 600px) {
+      .single.single-product .woocommerce ul.products li.product {
+        width: 49.9%; } }
+    .single.single-product .woocommerce ul.products li.product .yith-wcwl-add-to-wishlist {
+      display: none; }
+    .single.single-product .woocommerce ul.products li.product .products-title {
+      margin-top: 0; }
+
 /*# sourceMappingURL=style-sheet.css.map */

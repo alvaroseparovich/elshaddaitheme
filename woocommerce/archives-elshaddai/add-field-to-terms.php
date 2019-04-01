@@ -59,7 +59,3 @@ add_action( 'edited_pa_editora', 'save_field_meta', 10, 2 );
 add_action( 'create_pa_editora', 'save_field_meta', 10, 2 );
 add_action( 'edited_product_cat', 'save_field_meta', 10, 2 );  
 add_action( 'create_product_cat', 'save_field_meta', 10, 2 );
-
-
-
-   

@@ -1,0 +1,20 @@
+
+.single.single-product .woocommerce ul.products{
+    padding: 0;
+
+    li.product {
+        @media (max-width: 600px){
+            &{
+                width: 49.9%;
+            }
+        }
+
+        margin-bottom: 5px;
+        .yith-wcwl-add-to-wishlist{
+            display: none;
+        }
+        .products-title{
+            margin-top: 0;
+        }
+    }
+}
