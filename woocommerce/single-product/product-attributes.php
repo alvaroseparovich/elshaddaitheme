@@ -74,3 +74,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</tr>
 	<?php endforeach; ?>
 </table>
+<?php
+if ( isset($attributes["pa_autor"]) ){
+	do_action('author_list', Array($attributes["pa_autor"], $product) );
+}
+?> 

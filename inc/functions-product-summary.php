@@ -61,3 +61,22 @@ function intro_block_p2(){
   echo'<div class="bl-p2">';}
 function finish_block_div(){
   echo'</div>';}
+
+
+add_action('author_list','function_author_list');
+
+function function_author_list($arr){
+  $author = $arr[0];
+  $product = $arr[1];
+  $aut_tax = $author->get_taxonomy_object();
+  $aut_values = wc_get_product_terms( $product->get_id(), $author->get_name(), array( 'fields' => 'all' ) );
+  $url = esc_url( get_term_link( $aut_values[0]->term_id, 'pa_autor' ) );
+  if ($aut_values[0]->count > 1){
+    echo "<h2 class='widget-title'><span>Outros produtos de {$aut_values[0]->name}</span></h2>";
+    echo do_shortcode("[products attribute='autor' terms='{$aut_values[0]->name}' orderby='rand' limit='4']");
+    if( $aut_values[0]->count > 4 )
+    { 
+      echo "<a href='{$url}' style='margin-bottom:10px;'><button> Outros livros de {$aut_values[0]->name}</button></a>";
+    }else{ echo "todos os livros de {$aut_values[0]->name}"; }
+  }
+}
