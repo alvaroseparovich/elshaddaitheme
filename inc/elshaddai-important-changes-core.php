@@ -57,3 +57,6 @@ function shortcode_to_add( $atts ) {
     
 }
 add_shortcode( 'before_loop', 'shortcode_to_add' );
+
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
