@@ -30,6 +30,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link href="https://fonts.googleapis.com/css?family=Signika:400,600&display=swap" rel="stylesheet">
 <script>
 window.addEventListener('load', function(){
   //TODO: Organizar a logica para http e https
@@ -163,6 +164,11 @@ window.addEventListener('load', function(){
 				  </div>
 			   </div><!-- logo-end-->
 
+			   <div class="search-wrapper search-user-block header-search">
+
+							<?php get_search_form(); ?>
+						
+				</div>
 			<div class="wishlist-cart-wrapper clearfix">
 				<?php
 				if (function_exists('YITH_WCWL')) {
@@ -226,14 +232,6 @@ window.addEventListener('load', function(){
 				<?php } ?>
 
  				<div class="search-user-wrapper clearfix">
-					<div class="search-wrapper search-user-block">
-						<div class="search-icon">
-							<i class="fa fa-search"> </i>
-						</div>
-						<div class="header-search-box">
-							<?php get_search_form(); ?>
-						</div>
-					</div>
 					<div class="user-wrapper search-user-block">
 						<?php if ( is_user_logged_in() ) { ?>
 							<a href="<?php echo esc_url (get_permalink( get_option('woocommerce_myaccount_page_id') )); ?>" title="<?php esc_attr__('My Account','estore'); ?>" class="user-icon"><i class="fa fa-user"></i></a>

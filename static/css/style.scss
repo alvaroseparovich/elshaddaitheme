@@ -6,7 +6,7 @@ $secondary-color: black;
 $complementar-color: #f3bd0040;
 $c2: rgba(65, 130, 224, 1);
 $c2-less: rgba(65, 130, 224, 0.1);
-
+h1,h2,h3,h4,h5,h6{font-family: 'Signika', sans-serif;color: #2c240f;}
 .woocommerce {
   ul.products {
     li.product {
@@ -446,11 +446,76 @@ div{
         color: #f2bd00
     }
   }
-
+  .tg-container .category-menu{
+    background: #2c240fc7;
+  }
+  @media (max-width: 1000px) {
+    .middle-header-wrapper .tg-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .header-search{
+        margin:12px 0 0;
+      }
+      .site-title-wrapper.with-logo-text{
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 300px) {
+    div.middle-header-wrapper .tg-container{
+      display: flex;
+      .header-search{
+        width: 60%;
+      }
+      .custom-logo-link{
+        margin-right: 0;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .middle-header-wrapper .tg-container{
+      display: flex;
+      flex-wrap: wrap;
+      .header-search{
+        width: 70%;
+      }
+      .wishlist-cart-wrapper{
+        margin: 6px auto 0;
+      }
+    }
+  }
+  .middle-header-wrapper {
+    padding: 6px 0;    background: #f2bd01;
+    .header-search{
+      border-left:none;
+      margin: 12px 0 0 5%;
+      width: 40%;
+      &:hover{
+        background: #00000000
+      }
+      form.searchform{
+        display: flex;
+        max-width:500px;
+        [type=submit]{background: #009436;}
+        [type=search]{background: #ffffff;width: 100%;}
+      }
+    }
+  }
+  .wishlist-cart-wrapper {
+    margin: 6px 0;
+  }
   .logo-wrapper {
       margin: 0;
       display: flex;
       justify-content: center;
+      .custom-logo-link>img{
+        width: 75px;
+      }
+      #site-title>a{
+        color:#2c240f;
+        line-height: 1.9;
+      }
   }
   &#bottom-footer .copy-right {
     font-size: 0;
@@ -479,7 +544,19 @@ div.toggle-wrap:hover span.toggle i.fa.fa-reorder {
 section#woocommerce_recent_reviews-3 {
   background: rgba(240, 248, 255, 0)
 }
-.cart-wrapper .woocommerce.widget_shopping_cart .cart_list li img,
+.cart-wrapper {
+  .woocommerce.widget_shopping_cart {
+    max-height: 10px;
+    overflow: hidden;
+  }
+  &:hover .woocommerce.widget_shopping_cart {
+    max-height: 800px;
+  }
+
+  .woocommerce.widget_shopping_cart .cart_list li img{
+    border-radius: 2px;
+  }
+}
 .woocommerce-cart #main .woocommerce table.shop_table.cart tr.cart_item td.product-thumbnail img {
   border-radius: 2px;
 }
