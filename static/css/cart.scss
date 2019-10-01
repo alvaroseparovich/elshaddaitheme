@@ -1,0 +1,87 @@
+
+.woocommerce table#the_cart.cart .woocommerce-cart-form__cart-item.cart_item{
+    display:flex;
+    flex-wrap: nowrap;
+    td{
+        padding: 0 12px;
+        &.first-table-part  {width: 20%;}
+        &.second-table-part {width: 80%;}
+        
+        &.first-table-part{
+            width: 150px;
+        }
+        &.second-table-part {
+            
+            div{
+                display: flex;
+                flex-wrap: wrap;
+                h5{width: 100%;margin-bottom:0;}
+                .product-price, .product-quantity, .product-subtotal{
+                    margin: 0 15px 0 0;}
+                .product-subtotal{
+                    font-size: 1.3em;
+                    font-weight: bold;
+                }
+                &>*{
+                    text-align: left;}
+            }
+        }
+    }
+    .product-thumbnail{
+        display: flex;
+        img{
+            width: auto;
+            height: 100px;
+            padding: 5px;
+        }
+    }
+    
+    .product-remove a{
+        position: absolute;
+        background: #ff0000;
+        color:#ffadad!important;
+        &:hover{
+            color:white!important;
+        }
+    }
+}
+.woocommerce .cart_reorganized{
+    display: flex;
+    justify-content: center;
+    @media (max-width:600px) {
+        flex-wrap: wrap;
+        
+        form.woocommerce-cart-form{
+            width: 100%;
+        }
+        .cart-collaterals {
+            width: 100%;
+        }
+    }
+    .cart_totals{
+        .order-total .woocommerce-Price-amount.amount{
+            font-size: 2em;
+        }
+        .cart-subtotal, .woocommerce-shipping-totals.shipping{
+            th,td{
+                padding: 2px;
+            }
+        }
+        .widget-title{
+            display: none;
+        }
+    }
+    .woocommerce-cart-form{
+        width: 70%;
+    }
+}
+.woocommerce, .woocommerce-page{
+    .cart-collaterals {
+        width: 31%;
+        padding: 0 0 0 1em;
+        .cart_totals {
+            float: right;
+            width: 100%;
+        }
+    }
+} 
