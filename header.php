@@ -254,6 +254,15 @@ window.addEventListener('load', function(){
 
 			</div>
 		 </div> <!-- bottom-header.wrapper end -->
+		 <script>
+			(function() {
+				var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+				link.type = 'image/x-icon';
+				link.rel = 'shortcut icon';
+				link.href = 'https://elshaddai.com.br/wp-content/uploads/2017/11/cropped-logo-elshaddai-principal-e1511360223958-1-192x192.png';
+				document.getElementsByTagName('head')[0].appendChild(link);
+			})();
+		 </script>
 	</header>
 
 	<?php if ( get_theme_mod( 'estore_header_media_placement', 'header_media_below_main_menu' ) == 'header_media_below_main_menu' ) {
