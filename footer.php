@@ -99,10 +99,7 @@
 
 		<div class="tg-column-4 footer-block">
 
-			<section id="text-25" class="widget widget_text"><h4 class="widget-title"><span>Pagamento</span></h4>   <div class="textwidget"><img class="pg-cielo " data-src="//elshaddai.com.br/wp-content/uploads/2017/01/Banner_Bandeiras_Atualizado-1.gif" src="<?php echo( get_stylesheet_directory_uri() . '/none.jpg') ?>" style="margin-bottom:10px;" scale="0">
-
-
-				<img class="pg " src="//elshaddai.com.br/wp-content/uploads/2017/01/Bandeiras-Boleto.gif" scale="0">
+			<section id="text-25" class="widget widget_text"><h4 class="widget-title"><span>Pagamento</span></h4>   <div class="textwidget"><img class="pg-cielo " data-src="//elshaddai.com.br/wp-content/uploads/2019/10/bandeiras-e1569946780741.png" src="<?php echo( get_stylesheet_directory_uri() . '/none.jpg') ?>" style="margin-bottom:10px;" scale="0">
 			</div>
 		</section> </div>
 
