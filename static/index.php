@@ -8,3 +8,4 @@ function my_theme_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );

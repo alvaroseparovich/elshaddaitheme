@@ -21,7 +21,6 @@ require get_stylesheet_directory() . '/inc/yoast-seo-functions.php';
 //Fuctions substituted from main parent theme or added
 require get_stylesheet_directory() . '/woocommerce/archives-elshaddai/index.php';
 
-remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
 //----------------------Thank You Page-----------
 /*function correct_thank_you_page($text)
 { global $post;
