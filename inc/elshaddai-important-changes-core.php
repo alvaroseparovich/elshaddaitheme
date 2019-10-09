@@ -5,14 +5,14 @@
 function wc_elshaddai_bfield( $fields ) {
     $fields['billing_number']['maxlength'] = 5;
     $fields['billing_address_2']['maxlength'] = 30;
-    $fields['billing_address_2']['label_class'] = array('');    
+    $fields['billing_address_2']['label_class'] = array('');
     $fields['billing_neighborhood']['required'] = true;
     return $fields;}
 add_filter( 'woocommerce_billing_fields', 'wc_elshaddai_bfield' );
 function wc_elshaddai_sfield( $fields ) {
     $fields['shipping_number']['maxlength'] = 5;
     $fields['shipping_address_2']['maxlength'] = 30;
-    $fields['shipping_address_2']['label_class'] = array('');  
+    $fields['shipping_address_2']['label_class'] = array('');
     $fields['shipping_neighborhood']['required'] = true;
     return $fields;}
 add_filter( 'woocommerce_shipping_fields', 'wc_elshaddai_sfield' );

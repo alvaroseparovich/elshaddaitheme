@@ -735,7 +735,7 @@ li.woocommerce-MyAccount-navigation-link {
 .woocommerce {
   .woocommerce-order-details{
     table.shop_table tr th{
-      background: $primary-less;
+      background: #efefef;
     }
   }
   table.shop_table{
@@ -753,7 +753,7 @@ li.woocommerce-MyAccount-navigation-link {
       flex-grow: 1;
       text-align: center;
       border: none;
-      background: #f3bd00;
+      background: #efefef;
       padding: 7px 12px;
       color: #454545;
       font-size: 14px;
@@ -1600,6 +1600,7 @@ div.widgets_on_page > ul {
 body.home section {
   margin-top: 0px;
 }
+.pswp{display: none;}
 
 @import 'product.scss';
 @import 'cart.scss'
