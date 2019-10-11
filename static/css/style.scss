@@ -1565,7 +1565,6 @@ figure.banner-adaptive-img {
       padding: 0;
   }
 }
-
 .shipping-calculator-form {
     display: block!important;
 }
@@ -1594,13 +1593,11 @@ a.shipping-calculator-button {
 div.widgets_on_page > ul {
   margin: 0;
 }
-.page-header {
-  margin-bottom: 0;
-}
 body.home section {
   margin-top: 0px;
 }
 .pswp{display: none;}
 
 @import 'product.scss';
-@import 'cart.scss'
+@import 'cart.scss';
+@import 'page-header.scss';

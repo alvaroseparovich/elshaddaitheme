@@ -1698,10 +1698,6 @@ div.widgets_on_page > ul {
   margin: 0;
 }
 
-.page-header {
-  margin-bottom: 0;
-}
-
 body.home section {
   margin-top: 0px;
 }
@@ -1814,6 +1810,23 @@ body.home section {
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
   float: right;
   width: 100%;
+}
+
+#content .page-header {
+  background: white;
+}
+
+.page-header {
+  margin-bottom: 0;
+}
+.page-header .entry-title {
+  font-size: 3em;
+}
+.page-header h3.entry-sub-title {
+  margin: 15px 0;
+}
+.page-header h3.entry-sub-title div#crumbs {
+  display: none;
 }
 
 /*# sourceMappingURL=style-sheet.css.map */
