@@ -1,0 +1,15 @@
+
+#content .page-header{background: white;}
+.page-header {
+    margin-bottom: 0;
+    
+    .entry-title{
+        font-size: 3em;
+    }
+    h3.entry-sub-title{
+        margin: 15px 0;
+        div#crumbs{
+            display: none;
+        }
+    } 
+} 
