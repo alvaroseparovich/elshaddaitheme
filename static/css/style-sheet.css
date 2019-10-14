@@ -55,23 +55,23 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 5px;
 }
 .woocommerce div div.product p.stock.out-of-stock {
-  background: #ea0408;
+  background: #5f5f5f;
   /* Old browsers */
-  background: -moz-linear-gradient(45deg, #ea0408 0%, #6d0019 100%);
+  background: -moz-linear-gradient(45deg, #bfbfbf 0%, #5f5f5f 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #ea0408 0%, #6d0019 100%);
+  background: -webkit-linear-gradient(45deg, #bfbfbf 0%, #5f5f5f 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #ea0408 0%, #6d0019 100%);
+  background: linear-gradient(45deg, #bfbfbf 0%, #5f5f5f 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ea0408", endColorstr="#6d0019",GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfbfbf", endColorstr="#5f5f5f",GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   width: 100%;
   text-align: center;
   font-size: 1.2em;
   color: white;
   margin: 3px 0;
-  height: 3em;
-  line-height: 3em;
+  height: 2em;
+  line-height: 2em;
   border-radius: 0.6em;
 }
 .woocommerce div div.product form.cart div.quantity {
@@ -1521,12 +1521,16 @@ figure.banner-adaptive-img {
 }
 .single-product.woocommerce-page div.product a.xoo-wl-btn.button.btn {
   border-radius: 5px;
+  font-size: 1.2em;
   margin: 2px 0;
   width: 100%;
   white-space: normal;
   height: auto;
   line-height: 1.3em;
   padding: 0.6em 0.5em;
+}
+.single-product.woocommerce-page div.product a.xoo-wl-btn.button.btn:hover {
+  color: white;
 }
 
 .single_variation_wrap, .woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-enabled, .woocommerce-variation.single_variation, .woocommerce-variation-availability {
@@ -1810,6 +1814,10 @@ body.home section {
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
   float: right;
   width: 100%;
+}
+
+#the_cart p.backorder_notification {
+  margin-bottom: 0px;
 }
 
 #content .page-header {
