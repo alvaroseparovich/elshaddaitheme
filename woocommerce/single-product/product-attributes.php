@@ -78,4 +78,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( isset($attributes["pa_autor"]) ){
 	do_action('author_list', Array($attributes["pa_autor"], $product) );
 }
+if ( isset($attributes["pa_editora"]) ){
+	do_action('editora_list', Array($attributes["pa_editora"], $product) );
+}
 ?>

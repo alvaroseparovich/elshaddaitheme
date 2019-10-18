@@ -30,15 +30,15 @@
   font-weight: 700;
   margin: 10px 5px; }
 .woocommerce div div.product p.stock.out-of-stock {
-  background: #ea0408;
+  background: #5f5f5f;
   /* Old browsers */
-  background: -moz-linear-gradient(45deg, #ea0408 0%, #6d0019 100%);
+  background: -moz-linear-gradient(45deg, #bfbfbf 0%, #5f5f5f 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #ea0408 0%, #6d0019 100%);
+  background: -webkit-linear-gradient(45deg, #bfbfbf 0%, #5f5f5f 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #ea0408 0%, #6d0019 100%);
+  background: linear-gradient(45deg, #bfbfbf 0%, #5f5f5f 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea0408', endColorstr='#6d0019',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfbfbf', endColorstr='#5f5f5f',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   width: 100%;
   text-align: center;

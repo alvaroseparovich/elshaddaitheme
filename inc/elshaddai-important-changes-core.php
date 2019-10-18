@@ -1,6 +1,4 @@
 <?php
-
-
 //checkout com os campos bairro obrigatorio, 5 numeros no numero, e 30 no complemento
 function wc_elshaddai_bfield( $fields ) {
     $fields['billing_number']['maxlength'] = 5;
@@ -59,4 +57,4 @@ function shortcode_to_add( $atts ) {
 add_shortcode( 'before_loop', 'shortcode_to_add' );
 
 
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
