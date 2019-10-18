@@ -64,6 +64,7 @@ function finish_block_div(){
 
 
 add_action('author_list','function_author_list');
+add_action('editora_list','function_editora_list');
 
 function function_author_list($arr){
   $author = $arr[0];
@@ -73,10 +74,25 @@ function function_author_list($arr){
   $url = esc_url( get_term_link( $aut_values[0]->term_id, 'pa_autor' ) );
   if ($aut_values[0]->count > 1){
     echo "<h2 class='widget-title'><span>Outros produtos de {$aut_values[0]->name}</span></h2>";
-    echo do_shortcode("[products attribute='autor' terms='{$aut_values[0]->name}' orderby='rand' limit='4']");
+    echo do_shortcode("[products attribute='autor' terms='{$aut_values[0]->name}' orderby='rand' limit='4' columns='4']");
     if( $aut_values[0]->count > 4 )
     { 
       echo "<a href='{$url}' style='margin-bottom:10px;'><button> Outros livros de {$aut_values[0]->name}</button></a>";
-    }else{ echo "todos os livros de {$aut_values[0]->name}"; }
+    }else{ echo "Todos os livros de {$aut_values[0]->name}"; }
+  }
+}
+function function_editora_list($arr){
+  $editora = $arr[0];
+  $product = $arr[1];
+  $edt_tax = $editora->get_taxonomy_object();
+  $edt_values = wc_get_product_terms( $product->get_id(), $editora->get_name(), array( 'fields' => 'all' ) );
+  $url = esc_url( get_term_link( $edt_values[0]->term_id, 'pa_editora' ) );
+  if ($edt_values[0]->count > 1){
+    echo "<h2 class='widget-title'><span>Outros produtos de {$edt_values[0]->name}</span></h2>";
+    echo do_shortcode("[products attribute='editora' terms='{$edt_values[0]->name}' orderby='rand' limit='4' columns='4']");
+    if( $edt_values[0]->count > 4 )
+    { 
+      echo "<a href='{$url}' style='margin-bottom:10px;'><button> Outros livros da Editora {$edt_values[0]->name}</button></a>";
+    }else{ echo "Todos os livros da Editora {$edt_values[0]->name}"; }
   }
 }
