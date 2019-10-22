@@ -1710,6 +1710,10 @@ body.home section {
   display: none;
 }
 
+label[for=payment_method_woo-mercado-pago-ticket] img, label[for=payment_method_woo-mercado-pago-custom] img {
+  display: none;
+}
+
 .single.single-product .woocommerce ul.products {
   padding: 0;
 }

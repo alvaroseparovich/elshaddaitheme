@@ -1600,7 +1600,9 @@ body.home section {
   margin-top: 0px;
 }
 .pswp{display: none;}
-
+label[for='payment_method_woo-mercado-pago-ticket'] img, label[for='payment_method_woo-mercado-pago-custom'] img {
+  display: none;
+}
 @import 'product.scss';
 @import 'cart.scss';
 @import 'page-header.scss';

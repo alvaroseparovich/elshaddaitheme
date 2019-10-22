@@ -88,7 +88,7 @@ function function_editora_list($arr){
   $edt_values = wc_get_product_terms( $product->get_id(), $editora->get_name(), array( 'fields' => 'all' ) );
   $url = esc_url( get_term_link( $edt_values[0]->term_id, 'pa_editora' ) );
   if ($edt_values[0]->count > 1){
-    echo "<h2 class='widget-title'><span>Outros produtos de {$edt_values[0]->name}</span></h2>";
+    echo "<h2 class='widget-title'><span>Outros produtos da Editora {$edt_values[0]->name}</span></h2>";
     echo do_shortcode("[products attribute='editora' terms='{$edt_values[0]->name}' orderby='rand' limit='4' columns='4']");
     if( $edt_values[0]->count > 4 )
     { 
