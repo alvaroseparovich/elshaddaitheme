@@ -56,5 +56,11 @@ function shortcode_to_add( $atts ) {
 }
 add_shortcode( 'before_loop', 'shortcode_to_add' );
 
-
 //remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+function filter_status_mp_rule_pending($status, $used_gateway){ 
+  if ($used_gateway == 'WC_WooMercadoPago_TicketGateway'){
+    $status = 'on-hold';
+  } 
+  return $status;
+} 
+add_filter('status_mp_rule_pending', 'filter_status_mp_rule_pending' , 10 , 2 );
