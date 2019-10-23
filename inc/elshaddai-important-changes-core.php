@@ -64,3 +64,8 @@ function filter_status_mp_rule_pending($status, $used_gateway){
   return $status;
 } 
 add_filter('status_mp_rule_pending', 'filter_status_mp_rule_pending' , 10 , 2 );
+
+function change_status_on_processed_chekout_ticket($order){
+	$order->update_status('on-hold');
+}
+add_action('ticket_after_clean_cart', 'change_status_on_processed_chekout_ticket',10,1);
