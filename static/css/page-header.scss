@@ -1,15 +1,18 @@
 
 #content .page-header{background: white;}
 .page-header {
-    margin-bottom: 0;
-    
+    margin-bottom: 0!important;
+    padding: 20px 0 0;
     .entry-title{
         font-size: 3em;
     }
     h3.entry-sub-title{
-        margin: 15px 0;
+        margin: 0;
         div#crumbs{
             display: none;
         }
     } 
-} 
+    .woocommerce-breadcrumb {
+        margin: 0;
+    }
+}

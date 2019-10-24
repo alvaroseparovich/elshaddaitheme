@@ -1829,16 +1829,20 @@ label[for=payment_method_woo-mercado-pago-ticket] img, label[for=payment_method_
 }
 
 .page-header {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
+  padding: 20px 0 0;
 }
 .page-header .entry-title {
   font-size: 3em;
 }
 .page-header h3.entry-sub-title {
-  margin: 15px 0;
+  margin: 0;
 }
 .page-header h3.entry-sub-title div#crumbs {
   display: none;
+}
+.page-header .woocommerce-breadcrumb {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style-sheet.css.map */
