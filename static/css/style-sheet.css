@@ -1066,7 +1066,7 @@ div#review_form_wrapper {
   }
 }
 .woocommerce-checkout #payment:before {
-  content: "*Pagamento em Boleto Bancário Disponíveis em compras de no mínimo R$ 70,00.";
+  /*content: "*Pagamento em Boleto Bancário Disponíveis em compras de no mínimo R$ 70,00.";*/
   color: coral;
   padding: 10px;
 }
