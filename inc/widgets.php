@@ -2,6 +2,7 @@
 
 require get_stylesheet_directory() . '/inc/widget/editoras-autores-especial.php';
 require get_stylesheet_directory() . '/inc/widget/editoras-search.php';
+require get_stylesheet_directory() . '/inc/widget/index.php';
 
 add_action( 'widgets_init', 'estore_child_widgets_init' );
 
