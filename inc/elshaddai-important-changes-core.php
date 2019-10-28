@@ -69,3 +69,15 @@ function change_status_on_processed_chekout_ticket($order){
 	$order->update_status('on-hold');
 }
 add_action('ticket_after_clean_cart', 'change_status_on_processed_chekout_ticket',10,1);
+
+
+// define the woocommerce_correios_shipping_args callback 
+function filter_woocommerce_correios_shipping_args( $array, $this_id, $this_instance_id, $this_package ) { 
+  //$array['nVlPeso'] = 1000;
+  if($array['nVlPeso'] >= 30){
+    return array('nCdServico' => null);
+  }
+  return $array; 
+};
+// add the filter 
+add_filter( 'woocommerce_correios_shipping_args', 'filter_woocommerce_correios_shipping_args', 10, 4 );
