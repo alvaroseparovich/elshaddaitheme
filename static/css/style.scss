@@ -1598,6 +1598,21 @@ body.home section {
 label[for='payment_method_woo-mercado-pago-ticket'] img, label[for='payment_method_woo-mercado-pago-custom'] img {
   display: none;
 }
+div.product div.sales-tag, body div.sales-tag {
+  right: initial;
+  border-radius: 30px;
+  font-size: 1.6em;
+  font-weight: bold;
+  background: #0076dd;
+  color: #fff;
+}
+body div div.sales-tag {
+ top: 5px;
+}
+div.product div.sales-tag::before, div.product div.sales-tag::after,
+body div.sales-tag::before, body div.sales-tag::after {
+  display: none;
+}
 @import 'product.scss';
 @import 'cart.scss';
 @import 'page-header.scss';
