@@ -12,6 +12,9 @@ require get_stylesheet_directory() . '/inc/functions-product-summary.php';
 //Changes very specific to that store
 require get_stylesheet_directory() . '/inc/elshaddai-important-changes-core.php';
 
+//Theme Functions
+require get_stylesheet_directory() . '/inc/front-end-functions.php';
+
 //All functions related to imgs
 require get_stylesheet_directory() . '/inc/img-functions.php';
 
@@ -31,3 +34,11 @@ require get_stylesheet_directory() . '/woocommerce/archives-elshaddai/index.php'
   </form>". print_r($post)  ;
 }
 add_filter('woocommerce_thankyou_order_received_text', 'correct_thank_you_page');*/
+/*
+function sv_change_product_html( $price_html, $product ) {
+	$unit_price = get_post_meta( $product->id, 'unit_price', true );
+	$price_html = '<span class="amount">' .$product->get_regular_price() . ' per kg</span>';	
+	
+	return $price_html;
+}
+add_filter( 'woocommerce_get_price_html', 'sv_change_product_html', 10, 2 );*/
