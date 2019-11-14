@@ -4,13 +4,13 @@
 //Adicionar bottões para almentar unidades e diminuir, na página de Produtos.
 function add_cart_button_less(){ 
     global $product;
-    if(number_format( $product->get_stock_quantity(),0,'','' )>=0 or $product->is_on_backorder( 1 )) {
+    if(number_format( $product->get_stock_quantity(),0,'','' )>1 or $product->is_on_backorder( 1 )) {
         echo'<button class="btElLess" type="button" onclick="removeItem(); return false;">-</button></div>';
         }
       }
 function add_cart_button_plus(){ 
     global $product;
-    if(number_format( $product->get_stock_quantity(),0,'','' )>=0 or $product->is_on_backorder( 1 )) {
+    if(number_format( $product->get_stock_quantity(),0,'','' )>1 or $product->is_on_backorder( 1 )) {
         echo'<div class="counter"><button class="btElPlus" type="button" onclick="addItem(); return false;">+</button>';
         }
       }
