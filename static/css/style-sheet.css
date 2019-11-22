@@ -1723,6 +1723,18 @@ body div.sales-tag::before, body div.sales-tag::after {
   display: none;
 }
 
+p.cart-empty.woocommerce-info::before {
+  content: "";
+}
+
+p.cart-empty.woocommerce-info {
+  background: white;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
 .single.single-product .woocommerce ul.products {
   padding: 0;
 }
