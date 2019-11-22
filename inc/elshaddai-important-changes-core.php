@@ -22,7 +22,7 @@ add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
 
 //------------------------------------------------
 //-- checkout's checkbox to accept a posible calling after the payment.
-$min_price_to_require_checkbox = 200;
+$min_price_to_require_checkbox = 500;
 function cw_custom_checkbox_fields( $checkout ) {
   global $min_price_to_require_checkbox;
   $the_order_total_price = WC()->cart->total;
@@ -41,7 +41,6 @@ function cw_custom_checkbox_fields( $checkout ) {
 add_action('woocommerce_after_order_notes', 'cw_custom_checkbox_fields');
 
 function cw_custom_process_checkbox() {
-    global $woocommerce;
     global $min_price_to_require_checkbox;
     $the_order_total_price = WC()->cart->total;
     if( ($_POST['payment_method'] == 'pagarme-credit-card' ||
