@@ -20,6 +20,49 @@ function wc_elshaddai_ordernote( $fields ) {
 add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
 
 
+//------------------------------------------------
+//-- checkout's checkbox to accept a posible calling after the payment.
+$min_price_to_require_checkbox = 200;
+function cw_custom_checkbox_fields( $checkout ) {
+  global $min_price_to_require_checkbox;
+  $the_order_total_price = WC()->cart->total;
+  echo '<br><div class="cw_custom_class" style="padding:20px;"><h3>'.__('Confirmação das informações').'</h3>';
+  echo '<p>Caso necessário poderemos entrar em contato para confirmar as informações e documentos informados neste formulário.</p>';
+  if ($the_order_total_price >= $min_price_to_require_checkbox){
+    woocommerce_form_field( 'custom_checkbox', array(
+      'type'          => 'checkbox',
+      'label'         => __('Estou ciente.'),
+      'required'      => true,
+      'id'            => 'colab_field',
+    ), $checkout->get_value( 'custom_checkbox' ));
+  }
+  echo '</div>';
+}
+add_action('woocommerce_after_order_notes', 'cw_custom_checkbox_fields');
+
+function cw_custom_process_checkbox() {
+    global $woocommerce;
+    global $min_price_to_require_checkbox;
+    $the_order_total_price = WC()->cart->total;
+    if( ($_POST['payment_method'] == 'pagarme-credit-card' ||
+      $_POST['payment_method'] == 'woo-mercado-pago-custom'||
+      $_POST['payment_method'] == 'bacs') && $the_order_total_price >= $min_price_to_require_checkbox ){
+        if (!$_POST['custom_checkbox'])
+          wc_add_notice( __( 'É necessário estar ciente da possivel confirmação de informações.' ), 'error' );
+     }
+    
+}add_action('woocommerce_checkout_process', 'cw_custom_process_checkbox');
+
+add_action('woocommerce_checkout_update_order_meta', 'cw_checkout_order_meta');
+function cw_checkout_order_meta( $order_id ) {
+    if ($_POST['custom_checkbox']) update_post_meta( $order_id, 'checkbox name', esc_attr($_POST['custom_checkbox']));
+}
+
+
+
+
+
+
 
 //Bling passa a atualizar o estoque, Gereciamento do Woocommerce é desativado
 //Webhooks não podem ser agendadas Asyncronamente
