@@ -15,8 +15,8 @@ function wc_elshaddai_sfield( $fields ) {
     return $fields;}
 add_filter( 'woocommerce_shipping_fields', 'wc_elshaddai_sfield' );
 function wc_elshaddai_ordernote( $fields ) {
-     unset($fields['order']['order_comments']);
-     return $fields;}
+    unset($fields['order']['order_comments']);
+    return $fields;}
 add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
 
 
@@ -48,7 +48,7 @@ function cw_custom_process_checkbox() {
       $_POST['payment_method'] == 'bacs') && $the_order_total_price >= $min_price_to_require_checkbox ){
         if (!$_POST['custom_checkbox'])
           wc_add_notice( __( 'É necessário estar ciente da possivel confirmação de informações.' ), 'error' );
-     }
+    }
     
 }add_action('woocommerce_checkout_process', 'cw_custom_process_checkbox');
 
