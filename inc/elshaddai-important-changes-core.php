@@ -123,3 +123,20 @@ function filter_woocommerce_correios_shipping_args( $array, $this_id, $this_inst
 };
 // add the filter 
 add_filter( 'woocommerce_correios_shipping_args', 'filter_woocommerce_correios_shipping_args', 10, 4 );
+
+// Some times some completed orders went back to processing, this function prevent this behavior.
+add_filter( 'woocommerce_before_order_object_save', 'prevent_status_change_from_completed_to_processed', 1, 2 );
+function prevent_status_change_from_completed_to_processed( $order, $data_store ) {
+  $changes = $order->get_changes();
+  # Only run if status Change
+	if ( isset( $changes['status'] ) ) {
+    $data = $order->get_data();
+		$from_status = $data['status'];
+    $to_status = $changes['status'];
+    // if Status change from completed to processing, keep status completed
+    if ($from_status == 'completed' && $to_status == 'processing'){
+      $order->set_status('completed', 'Mudança de status Concluído para Processando Bloqueado | ');
+    }
+	}
+	return $order;
+}
