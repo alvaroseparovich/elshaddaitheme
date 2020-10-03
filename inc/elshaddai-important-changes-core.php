@@ -118,8 +118,8 @@ function prevent_status_change_from_completed_to_processed( $order, $data_store 
     if ($from_status == 'completed' && $to_status == 'processing'){
       $order->set_status('completed', 'Mudança de status Concluído para Processando Bloqueado | ');
     }
-    // Se for pedido novo, do mercado pago com boleto, e status pending, muda o status para on-hold
-	} elseif ($order->get_id() == 0 && $order->get_payment_method() === 'woo-mercado-pago-ticket' && $order->get_status() === 'pending') {
+    // Se for pedido do mercado pago com boleto, e status pending, muda o status para on-hold
+	} elseif ($order->get_payment_method() === 'woo-mercado-pago-ticket' && $order->get_status() === 'pending') {
     $order->set_status('on-hold', 'Status de compra de boleto alterado de pending para on-hold | ');
   }
 	return $order;
