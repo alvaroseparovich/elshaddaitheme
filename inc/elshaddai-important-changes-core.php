@@ -19,7 +19,6 @@ function wc_elshaddai_ordernote( $fields ) {
     return $fields;}
 add_filter( 'woocommerce_checkout_fields' , 'wc_elshaddai_ordernote' );
 
-
 //------------------------------------------------
 //-- checkout's checkbox to accept a posible calling after the payment.
 $min_price_to_require_checkbox = 500;
@@ -58,11 +57,6 @@ function cw_checkout_order_meta( $order_id ) {
 }
 
 
-
-
-
-
-
 //Bling passa a atualizar o estoque, Gereciamento do Woocommerce é desativado
 //Webhooks não podem ser agendadas Asyncronamente
 add_filter("woocommerce_payment_complet_reduce_order_stock", false);
@@ -99,19 +93,6 @@ function shortcode_to_add( $atts ) {
 add_shortcode( 'before_loop', 'shortcode_to_add' );
 
 //remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-function filter_status_mp_rule_pending($status, $used_gateway){ 
-  if ($used_gateway == 'WC_WooMercadoPago_TicketGateway'){
-    $status = 'on-hold';
-  } 
-  return $status;
-} 
-add_filter('status_mp_rule_pending', 'filter_status_mp_rule_pending' , 10 , 2 );
-
-function change_status_on_processed_chekout_ticket($order){
-	$order->update_status('on-hold');
-}
-add_action('ticket_after_clean_cart', 'change_status_on_processed_chekout_ticket',10,1);
-
 
 // define the woocommerce_correios_shipping_args callback 
 function filter_woocommerce_correios_shipping_args( $array, $this_id, $this_instance_id, $this_package ) { 
@@ -129,7 +110,7 @@ add_filter( 'woocommerce_before_order_object_save', 'prevent_status_change_from_
 function prevent_status_change_from_completed_to_processed( $order, $data_store ) {
   $changes = $order->get_changes();
   # Only run if status Change
-	if ( isset( $changes['status'] ) ) {
+  if ( isset( $changes['status'] ) ) {
     $data = $order->get_data();
 		$from_status = $data['status'];
     $to_status = $changes['status'];
@@ -137,6 +118,9 @@ function prevent_status_change_from_completed_to_processed( $order, $data_store 
     if ($from_status == 'completed' && $to_status == 'processing'){
       $order->set_status('completed', 'Mudança de status Concluído para Processando Bloqueado | ');
     }
-	}
+    // Se for pedido do mercado pago com boleto, e status pending, muda o status para on-hold
+	} elseif ($order->get_payment_method() === 'woo-mercado-pago-ticket' && $order->get_status() === 'pending') {
+    $order->set_status('on-hold', 'Status de compra de boleto alterado de pending para on-hold | ');
+  }
 	return $order;
 }
