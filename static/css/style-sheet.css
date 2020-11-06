@@ -1732,6 +1732,12 @@ p.cart-empty.woocommerce-info {
   padding-top: 0;
 }
 
+.widget.widget-featured-collection ins .amount {
+  color: #00A9E0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 .single.single-product .woocommerce ul.products {
   padding: 0;
 }

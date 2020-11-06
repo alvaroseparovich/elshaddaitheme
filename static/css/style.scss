@@ -1624,6 +1624,11 @@ p.cart-empty.woocommerce-info {
   padding-top: 0;
 
 }
+.widget.widget-featured-collection ins .amount{
+  color: #00A9E0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
 
 @import 'product.scss';
 @import 'cart.scss';

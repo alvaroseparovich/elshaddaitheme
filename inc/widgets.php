@@ -664,7 +664,7 @@ class estore_child_woocommerce_product_attribute_carousel extends WP_Widget {
 									}?>
 							</div>
 							<?php if ( $price_html = $product->get_price_html() ) : ?>
-								<span class="price"><span class="price-text"><?php esc_html_e('Price:', 'estore'); ?></span><?php echo $price_html; ?></span>
+								<span class="price"><?php echo $price_html; ?></span>
 							<?php endif; ?>
 
 							<?php
