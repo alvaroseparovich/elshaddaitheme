@@ -1732,6 +1732,12 @@ p.cart-empty.woocommerce-info {
   padding-top: 0;
 }
 
+.widget.widget-featured-collection ins .amount {
+  color: #00A9E0;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 .single.single-product .woocommerce ul.products {
   padding: 0;
 }
@@ -1861,6 +1867,16 @@ p.cart-empty.woocommerce-info {
 }
 .page-header .woocommerce-breadcrumb {
   margin: 0;
+}
+
+#masthead.site-header {
+  position: fixed;
+  width: 100%;
+  transition: top 0.2s ease-in-out;
+  z-index: 9999999;
+}
+#masthead.site-header.nav-up {
+  top: -200px !important;
 }
 
 /*# sourceMappingURL=style-sheet.css.map */

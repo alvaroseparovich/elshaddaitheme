@@ -16,3 +16,22 @@
         margin: 0;
     }
 }
+
+// ============================================================
+//  STICKY HEADER
+// ============================================================
+
+// body {
+//     padding-top: 40px;
+// }
+
+#masthead.site-header {
+    position: fixed;
+    width: 100%;
+    transition: top 0.2s ease-in-out;
+    z-index: 9999999;
+    
+    &.nav-up {
+        top: -200px !important;
+    }
+}
