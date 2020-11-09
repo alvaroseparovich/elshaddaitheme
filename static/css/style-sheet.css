@@ -1869,4 +1869,14 @@ p.cart-empty.woocommerce-info {
   margin: 0;
 }
 
+#masthead.site-header {
+  position: fixed;
+  width: 100%;
+  transition: top 0.2s ease-in-out;
+  z-index: 9999999;
+}
+#masthead.site-header.nav-up {
+  top: -200px !important;
+}
+
 /*# sourceMappingURL=style-sheet.css.map */
